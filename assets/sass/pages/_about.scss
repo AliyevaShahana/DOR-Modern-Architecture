@@ -138,3 +138,179 @@ header {
   }
 }
 
+#lorem-ipsum {
+  .lorem-ipsum {
+    padding-bottom: 5rem;
+    display: flex;
+    align-items: center;
+
+    .owl-carousel {
+      width: 50%;
+      z-index: -1;
+      .page {
+        width: 100%;
+        background-image: url("../image/about-us-img-1.jpg");
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        padding: 11rem 0;
+        // z-index: -1;
+      }
+      .one {
+        background-image: url("../image/about-us-img-2.jpg");
+      }
+      .two {
+        background-image: url("../image/about-us-img-3.jpg");
+      }
+
+      .owl-dots {
+        position: relative;
+        .owl-dot {
+          height: 1rem;
+
+          span {
+            background-color: #869791bb;
+            position: relative;
+            margin: 0;
+            border-radius: 0;
+            width: 3rem;
+            height: 1px;
+
+            &:before {
+              content: "";
+              position: absolute;
+              border-left: 1.5px solid #869791;
+              height: 1rem;
+              right: 0;
+              bottom: -8.5px;
+              z-index: 99;
+              transform: rotate(45deg);
+            }
+          }
+          &:nth-child(1) {
+            position: relative;
+            &:before {
+              content: "";
+              position: absolute;
+              border-left: 1.5px solid #869791;
+              height: 1.03rem;
+              left: 0;
+              bottom: -0.5px;
+              z-index: 99;
+              transform: rotate(45deg);
+            }
+
+            &:after {
+              content: "1";
+              position: absolute;
+              height: 2rem;
+              width: 2rem;
+              bottom: -5px;
+              left: 8px;
+              color: #869791bb;
+              font-family: "Montserrat", sans-serif;
+              font-weight: 600;
+              font-size: 15px;
+            }
+            &.active {
+              &:after {
+                content: "1";
+                color: white;
+              }
+            }
+
+            span {
+              &:after {
+                content: "";
+                position: absolute;
+                height: 1rem;
+                border-bottom: 1px solid #869791;
+                color: #869791bb;
+                font-size: 25px;
+                width: 1.5rem;
+                left: -1.5rem;
+                bottom: 0;
+                z-index: 99;
+                transform: rotate(0deg);
+              }
+            }
+          }
+          &:nth-child(2) {
+            position: relative;
+            &:after {
+              content: "2";
+              position: absolute;
+              height: 2rem;
+              width: 2rem;
+              bottom: -5px;
+              left: 8px;
+              color: #869791bb;
+              font-family: "Montserrat", sans-serif;
+              font-weight: 600;
+              font-size: 15px;
+            }
+            &.active {
+              &:after {
+                content: "2";
+                color: white;
+              }
+            }
+          }
+          &:nth-child(3) {
+            position: relative;
+            &:after {
+              content: "3";
+              position: absolute;
+              height: 2rem;
+              width: 2rem;
+              bottom: -5px;
+              left: 8px;
+              color: #869791bb;
+              font-family: "Montserrat", sans-serif;
+              font-weight: 600;
+              font-size: 15px;
+            }
+            &.active {
+              &:after {
+                content: "3";
+                color: white;
+              }
+            }
+
+            span {
+              &:after {
+                content: "";
+                position: absolute;
+                height: 1rem;
+                border-bottom: 1px solid #869791;
+                color: #869791bb;
+                font-size: 25px;
+                width: 1.5rem;
+                right: -1.5rem;
+                bottom: 0;
+                z-index: 99;
+                transform: rotate(0deg);
+              }
+            }
+          }
+
+          &.active {
+            span {
+              background-color: white;
+            }
+          }
+        }
+      }
+    }
+    .text {
+      //   position: absolute;
+      transform: translate(-34px, -30px);
+      width: 50%;
+      background-color: #1d1d1d;
+      padding: 2.5rem 3.5rem;
+      h5 {
+        margin: 1rem 0;
+      }
+    }
+  }
+}

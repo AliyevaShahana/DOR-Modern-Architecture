@@ -59,9 +59,9 @@ table {
 
 .container {
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 1450px;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1450px) {
   .container {
     padding: 0 5%;
   }
@@ -1148,4 +1148,157 @@ header {
   font-family: "Montserrat", sans-serif;
   text-align: center;
   line-height: 50px;
+}
+
+#lorem-ipsum .lorem-ipsum {
+  padding-bottom: 5rem;
+  display: flex;
+  align-items: center;
+}
+#lorem-ipsum .lorem-ipsum .owl-carousel {
+  width: 50%;
+  z-index: -1;
+}
+#lorem-ipsum .lorem-ipsum .owl-carousel .page {
+  width: 100%;
+  background-image: url("../image/about-us-img-1.jpg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 11rem 0;
+}
+#lorem-ipsum .lorem-ipsum .owl-carousel .one {
+  background-image: url("../image/about-us-img-2.jpg");
+}
+#lorem-ipsum .lorem-ipsum .owl-carousel .two {
+  background-image: url("../image/about-us-img-3.jpg");
+}
+#lorem-ipsum .lorem-ipsum .owl-carousel .owl-dots {
+  position: relative;
+}
+#lorem-ipsum .lorem-ipsum .owl-carousel .owl-dots .owl-dot {
+  height: 1rem;
+}
+#lorem-ipsum .lorem-ipsum .owl-carousel .owl-dots .owl-dot span {
+  background-color: rgba(134, 151, 145, 0.7333333333);
+  position: relative;
+  margin: 0;
+  border-radius: 0;
+  width: 3rem;
+  height: 1px;
+}
+#lorem-ipsum .lorem-ipsum .owl-carousel .owl-dots .owl-dot span:before {
+  content: "";
+  position: absolute;
+  border-left: 1.5px solid #869791;
+  height: 1rem;
+  right: 0;
+  bottom: -8.5px;
+  z-index: 99;
+  transform: rotate(45deg);
+}
+#lorem-ipsum .lorem-ipsum .owl-carousel .owl-dots .owl-dot:nth-child(1) {
+  position: relative;
+}
+#lorem-ipsum .lorem-ipsum .owl-carousel .owl-dots .owl-dot:nth-child(1):before {
+  content: "";
+  position: absolute;
+  border-left: 1.5px solid #869791;
+  height: 1.03rem;
+  left: 0;
+  bottom: -0.5px;
+  z-index: 99;
+  transform: rotate(45deg);
+}
+#lorem-ipsum .lorem-ipsum .owl-carousel .owl-dots .owl-dot:nth-child(1):after {
+  content: "1";
+  position: absolute;
+  height: 2rem;
+  width: 2rem;
+  bottom: -5px;
+  left: 8px;
+  color: rgba(134, 151, 145, 0.7333333333);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+}
+#lorem-ipsum .lorem-ipsum .owl-carousel .owl-dots .owl-dot:nth-child(1).active:after {
+  content: "1";
+  color: white;
+}
+#lorem-ipsum .lorem-ipsum .owl-carousel .owl-dots .owl-dot:nth-child(1) span:after {
+  content: "";
+  position: absolute;
+  height: 1rem;
+  border-bottom: 1px solid #869791;
+  color: rgba(134, 151, 145, 0.7333333333);
+  font-size: 25px;
+  width: 1.5rem;
+  left: -1.5rem;
+  bottom: 0;
+  z-index: 99;
+  transform: rotate(0deg);
+}
+#lorem-ipsum .lorem-ipsum .owl-carousel .owl-dots .owl-dot:nth-child(2) {
+  position: relative;
+}
+#lorem-ipsum .lorem-ipsum .owl-carousel .owl-dots .owl-dot:nth-child(2):after {
+  content: "2";
+  position: absolute;
+  height: 2rem;
+  width: 2rem;
+  bottom: -5px;
+  left: 8px;
+  color: rgba(134, 151, 145, 0.7333333333);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+}
+#lorem-ipsum .lorem-ipsum .owl-carousel .owl-dots .owl-dot:nth-child(2).active:after {
+  content: "2";
+  color: white;
+}
+#lorem-ipsum .lorem-ipsum .owl-carousel .owl-dots .owl-dot:nth-child(3) {
+  position: relative;
+}
+#lorem-ipsum .lorem-ipsum .owl-carousel .owl-dots .owl-dot:nth-child(3):after {
+  content: "3";
+  position: absolute;
+  height: 2rem;
+  width: 2rem;
+  bottom: -5px;
+  left: 8px;
+  color: rgba(134, 151, 145, 0.7333333333);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+}
+#lorem-ipsum .lorem-ipsum .owl-carousel .owl-dots .owl-dot:nth-child(3).active:after {
+  content: "3";
+  color: white;
+}
+#lorem-ipsum .lorem-ipsum .owl-carousel .owl-dots .owl-dot:nth-child(3) span:after {
+  content: "";
+  position: absolute;
+  height: 1rem;
+  border-bottom: 1px solid #869791;
+  color: rgba(134, 151, 145, 0.7333333333);
+  font-size: 25px;
+  width: 1.5rem;
+  right: -1.5rem;
+  bottom: 0;
+  z-index: 99;
+  transform: rotate(0deg);
+}
+#lorem-ipsum .lorem-ipsum .owl-carousel .owl-dots .owl-dot.active span {
+  background-color: white;
+}
+#lorem-ipsum .lorem-ipsum .text {
+  transform: translate(-34px, -30px);
+  width: 50%;
+  background-color: #1d1d1d;
+  padding: 2.5rem 3.5rem;
+}
+#lorem-ipsum .lorem-ipsum .text h5 {
+  margin: 1rem 0;
 }/*# sourceMappingURL=main.css.map */

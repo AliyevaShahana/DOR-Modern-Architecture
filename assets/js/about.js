@@ -16,11 +16,14 @@ $(".owl-carousel").owlCarousel({
   },
 });
 
+
+
 let owlNav = document.querySelector(".owl-nav");
 let prev = owlNav.children[0].children[0];
 prev.innerHTML = `<i class="fa-solid fa-arrow-left-long"></i>`;
 let next = owlNav.children[1].children[0];
 next.innerHTML = `<i class="fa-solid fa-arrow-right-long"></i>`;
+
 
 let valueDisplays = document.querySelectorAll(".num");
 let interval = 5000;
