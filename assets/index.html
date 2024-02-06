@@ -32,7 +32,7 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./sass/main.css" />
-    <script defer src="https://cdn.lordicon.com/lordicon.js"></script>
+    <script defer src="https://unpkg.com/scrollreveal"></script>
 
     <script
       defer
@@ -45,6 +45,31 @@
     <script defer src="./js/main.js"></script>
   </head>
   <body>
+    <header>
+      <div class="container">
+        <div class="header">
+          <div class="left">
+            <span><a href=""> DØR</a></span>
+            <nav>
+              <ul>
+                <li><a href="">HOME</a></li>
+                <li><a href="">ABOUT</a></li>
+                <li><a href="">PORTOFOLIO</a></li>
+                <!-- <li><a href="">RENT</a></li> -->
+                <li><a href="">SHOP</a></li>
+                <li><a href="">CONTACT</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="icons">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-pinterest-p"></i>
+            <i class="fa-solid fa-basketball"></i>
+          </div>
+        </div>
+      </div>
+    </header>
+
     <main>
       <div class="container">
         <div class="main">
@@ -53,11 +78,13 @@
               <div class="scheme">
                 <img src="./image/main-rev-slider-img-4.png" alt="" />
               </div>
-              <div class="building">
-                <img src="./image/main-rev-slider-img-3.jpg" alt="" />
+              <div class="building-wrap">
+                <div class="building">
+                  <img src="./image/main-rev-slider-img-3.jpg" alt="" />
+                </div>
               </div>
               <div class="content">
-                <h1>ENVISION TOMORROW</h1>
+                <h1 class="h1">ENVISION TOMORROW</h1>
                 <p>
                   Import the entire theme demo content with just a single click
                   of your mouse & easily modify the elements to your liking.
@@ -73,9 +100,12 @@
               <div class="scheme">
                 <img src="./image/main-rev-slider-img-3.png" alt="" />
               </div>
-              <div class="building">
-                <img src="./image/main-rev-slider-img-2.jpg" alt="" />
+              <div class="building-wrap">
+                <div class="building">
+                  <img src="./image/main-rev-slider-img-2.jpg" alt="" />
+                </div>
               </div>
+
               <div class="content">
                 <h1>ENVISION TOMORROW</h1>
                 <p>
@@ -93,8 +123,10 @@
               <div class="scheme">
                 <img src="./image/main-rev-slider-img-2.png" alt="" />
               </div>
-              <div class="building">
-                <img src="./image/main-rev-slider-img-1.jpg" alt="" />
+              <div class="building-wrap">
+                <div class="building">
+                  <img src="./image/main-rev-slider-img-1.jpg" alt="" />
+                </div>
               </div>
               <div class="content">
                 <h1>ENVISION TOMORROW</h1>
@@ -114,7 +146,7 @@
       </div>
     </main>
 
-    <section id="project-collection">
+    <!-- <section id="project-collection">
       <div class="project-collection">
         <div class="img-div">
           <img src="./image/home-5-port-img-9.jpg" alt="" />
@@ -189,7 +221,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <section id="working-process">
       <div class="container">
@@ -451,6 +483,7 @@
       </div>
     </section>
 
+    <!-- 
     <section id="about-us-company">
       <div class="container">
         <div class="about-us-company">
@@ -471,6 +504,239 @@
             </div>
           </div>
           <div class="photo"></div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- <section id="our-team">
+      <div class="container">
+        <div class="our-team">
+          <div class="title">
+            <p>
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem.
+            </p>
+            <h2>MEET OUR TEAM OF EXPERTS</h2>
+            <div class="under-line"></div>
+          </div>
+
+          <div class="cards">
+            <div class="card">
+              <img src="./image/main-team-img-3.jpg" alt="" />
+              <div class="content">
+                <h3>EMA DENISON</h3>
+                <h5>President & CEO</h5>
+                <div class="team-icon">
+                  <i class="fa-brands fa-facebook-f"></i>
+                  <i class="fa-brands fa-pinterest-p"></i>
+                  <i class="fa-solid fa-basketball"></i>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img src="./image/main-team-img-2.jpg" alt="" />
+              <div class="content">
+                <h3>Arnold Urie</h3>
+                <h5>Architect</h5>
+                <div class="team-icon">
+                  <i class="fa-brands fa-facebook-f"></i>
+                  <i class="fa-brands fa-pinterest-p"></i>
+                  <i class="fa-solid fa-basketball"></i>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img src="./image/main-team-img-1.jpg" alt="" />
+              <div class="content">
+                <h3>George Fong</h3>
+                <h5>Project Manager</h5>
+                <div class="team-icon">
+                  <i class="fa-brands fa-facebook-f"></i>
+                  <i class="fa-brands fa-pinterest-p"></i>
+                  <i class="fa-solid fa-basketball"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- <section id="advertising-video">
+      <div class="container">
+        <div class="advertising-video">
+          <a>
+            <div class="video-player">
+              <video width="100%" controls autoplay class="my-video">
+                <source src="./image/media.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="icon play-video">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px"
+                y="0px"
+                width="55px"
+                height="55px"
+                viewBox="0 0 55 55"
+                enable-background="new 0 0 55 55"
+                xml:space="preserve"
+              >
+                <g>
+                  <circle
+                    fill="none"
+                    stroke="#FFFFFF"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-miterlimit="10"
+                    cx="27.333"
+                    cy="27.584"
+                    r="26.333"
+                  ></circle>
+                  <circle
+                    fill="none"
+                    stroke="#FFFFFF"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-miterlimit="10"
+                    cx="27.333"
+                    cy="27.584"
+                    r="26.333"
+                  ></circle>
+                  <polygon
+                    fill="none"
+                    stroke="#FFFFFF"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-miterlimit="10"
+                    points="
+                    17.989,13.143 17.989,42.024 41.774,27.584 "
+                  ></polygon>
+                  <polygon
+                    fill="none"
+                    stroke="#FFFFFF"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-miterlimit="10"
+                    points="
+                    17.989,13.143 17.989,42.024 41.774,27.584 "
+                  ></polygon>
+                </g>
+              </svg>
+            </div>
+            <i class="fa-solid x-mark">a</i>
+          </a>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- 
+    <section id="check-out">
+      <div class="container">
+        <div class="check-out">
+          <div class="title">
+            <p>
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem.
+            </p>
+            <h2>CHECK OUT OUR BLOG</h2>
+            <div class="under-line"></div>
+          </div>
+          <div class="cards">
+            <div class="card">
+              <img src="./image/Main-blog-list-img-1.jpg" width="100%" />
+              <div class="content">
+                <h5>By Nikolaus Johnson</h5>
+                <h3>HOW TO REACH THE TOP AND STAY THERE</h3>
+                <a href="">
+                  <span class="text">READ MORE</span>
+                  <span class="pattern"> </span>
+                </a>
+              </div>
+            </div>
+            <div class="card">
+              <img src="./image/Main-blog-list-img-2.jpg" width="100%" />
+              <div class="content">
+                <h5>By Nikolaus Johnson</h5>
+                <h3>HOW TO REACH THE TOP AND STAY THERE</h3>
+                <a href="">
+                  <span class="text">READ MORE</span>
+                  <span class="pattern"> </span>
+                </a>
+              </div>
+            </div>
+            <div class="card">
+              <img src="./image/Main-blog-list-img-3.jpg" width="100%" />
+              <div class="content">
+                <h5>By Nikolaus Johnson</h5>
+                <h3>HOW TO REACH THE TOP AND STAY THERE</h3>
+                <a href="">
+                  <span class="text">READ MORE</span>
+                  <span class="pattern"> </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- <section id="core-company">
+      <div class="container">
+        <div class="core-company">
+          <div class="left">
+            <ul>
+              <li><h4>THE CORE COMPANY VALUES</h4></li>
+              <li>
+                <h5>
+                  Sed ut perspiclatis unde olnis iste natus errorbetvoluta <br> tema
+                  ccusa ntium lorem ipsum dolor eto rem.
+                </h5>
+              </li>
+              <li>
+                <h6>
+                  At vero eos et accusamus et iusto odio dignis simos ducimus
+                  qui blanditiis praesnti um voluptatum deleniti atque corryi
+                  upti quos dolores et quas moles qui dolorem ipsum quia dolor
+                  sit amet, consectetur adipisci velit, sed quia lore adipiscing
+                  sed do eiusmod tempor elit.
+                </h6>
+              </li>
+            </ul>
+          </div>
+
+          <div class="right">
+            <ul>
+              <li><p>EXHIBITION</p></li>
+              <li><h6>– 2019 Archie Expo</h6></li>
+              <li><h6>– Goldman Gallery</h6></li>
+              <li><h6>– Vista Tomorrow ‘09</h6></li>
+              <li><h6>– 2017 Modern Daily</h6></li>
+              <li><h6>– 10th Annual Regarda</h6></li>
+              <li><h6>– Hamilton Showcase</h6></li>
+            </ul>
+            <ul>
+              <li><p>AWARDS</p></li>
+              <li><h6>– Imminent Plaza</h6></li>
+              <li><h6>– 2nd place, Tokyo</h6></li>
+              <li><h6>– 1st jury prize, NYCA</h6></li>
+              <li><h6>– 2018 Riviera Aw.</h6></li>
+              <li><h6>– NYC’s Most Wanted</h6></li>
+              <li><h6>– Fresh Faces, Ammi</h6></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <section id="do-you-want">
+      <div class="container">
+        <div class="do-you-want">
+          <h1>DO YOU WANT TO WORK WITH US?</h1>
+          <a href="">
+            <span class="border"></span>
+            <span class="line"></span>
+            <span class="text">VIEW MORE</span>
+          </a>
         </div>
       </div>
     </section>
