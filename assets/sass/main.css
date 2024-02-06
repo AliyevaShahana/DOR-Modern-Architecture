@@ -144,7 +144,6 @@ body {
   height: 500vh;
 }
 body header {
-  position: fixed;
   z-index: 111;
   background-color: black;
   width: 100%;
@@ -1018,4 +1017,135 @@ body #core-company .core-company .right {
     flex-direction: column;
     gap: 2rem;
   }
+}
+
+header {
+  padding: 1rem;
+}
+
+#header-slider {
+  color: #fff;
+}
+#header-slider .owl-carousel {
+  z-index: -1;
+}
+#header-slider .owl-carousel .page {
+  text-align: center;
+  background-image: url("../image/home-2.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 13rem 0;
+}
+#header-slider .owl-carousel .page h1 {
+  font-size: 120px;
+  font-weight: 100;
+}
+#header-slider .owl-carousel .one {
+  background-image: url("../image/Parallax-home-img-1.jpg");
+}
+#header-slider .owl-carousel .two {
+  background-image: url("../image/Parallax-home-img-5.jpg");
+}
+#header-slider .owl-nav {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 88%;
+  bottom: 17rem;
+  left: 5rem;
+}
+#header-slider .owl-nav button {
+  background-color: transparent;
+}
+#header-slider .owl-nav i {
+  color: white;
+}
+#header-slider .container {
+  margin-top: -90px;
+  justify-content: center;
+  z-index: 111;
+}
+#header-slider .container .boxs {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  transition: all 1s;
+}
+#header-slider .container .boxs .box {
+  background-image: url("../image/banner-bg-1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 4rem 6rem;
+  text-align: center;
+  transition: all 1s;
+}
+#header-slider .container .boxs .box:hover {
+  background-image: url("../image/about-me-service-hov-2.jpg");
+}
+#header-slider .container .boxs .box:nth-child(2) {
+  background-image: url("../image/banner-bg-2.jpg");
+}
+#header-slider .container .boxs .box:nth-child(2):hover {
+  background-image: url("../image/about-me-service-hov-3.jpg");
+}
+#header-slider .container .boxs .box:nth-child(3) {
+  background-image: url("../image/banner-bg-3.jpg");
+}
+#header-slider .container .boxs .box:nth-child(3):hover {
+  background-image: url("../image/about-me-service-hov-3.jpg");
+}
+#header-slider .container .boxs .box h3 {
+  margin: 0.5rem;
+}
+
+#planning-stage {
+  padding: 9rem 0;
+}
+#planning-stage .cards {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 1rem;
+  row-gap: 4rem;
+}
+@media screen and (max-width: 1023px) {
+  #planning-stage .cards {
+    grid-template-columns: auto;
+  }
+}
+#planning-stage .cards .card {
+  display: flex;
+  gap: 1.5rem;
+}
+#planning-stage .cards .card i {
+  font-size: 25px;
+}
+#planning-stage .cards .card .content h3 {
+  margin-bottom: 1rem;
+}
+
+#counter {
+  background-image: url("../image/home-3-parallax-1 (2).jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 10rem;
+  padding: 10rem 0;
+}
+#counter .container {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+}
+#counter .container .counter {
+  color: #fff;
+  font-size: 60px;
+  font-weight: 200;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  line-height: 50px;
 }/*# sourceMappingURL=main.css.map */

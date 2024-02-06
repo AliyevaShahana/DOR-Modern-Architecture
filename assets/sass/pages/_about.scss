@@ -1,0 +1,140 @@
+header {
+  padding: 1rem;
+}
+#header-slider {
+  color: #fff;
+  .owl-carousel {
+    z-index: -1;
+    .page {
+      text-align: center;
+      background-image: url("../image/home-2.jpg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      padding: 13rem 0;
+
+      h1 {
+        font-size: 120px;
+        font-weight: 100;
+      }
+    }
+    .one {
+      background-image: url("../image/Parallax-home-img-1.jpg");
+    }
+    .two {
+      background-image: url("../image/Parallax-home-img-5.jpg");
+    }
+  }
+
+  .owl-nav {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 88%;
+    bottom: 17rem;
+    left: 5rem;
+    button {
+      background-color: transparent;
+    }
+    i {
+      color: white;
+      // &:hover {
+      //   background-color: black;
+      // }
+    }
+  }
+
+  .container {
+    margin-top: -90px;
+    justify-content: center;
+    z-index: 111;
+    .boxs {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      transition: all 1s;
+      .box {
+        background-image: url("../image/banner-bg-1.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 4rem 6rem;
+        text-align: center;
+        transition: all 1s;
+        &:hover {
+          background-image: url("../image/about-me-service-hov-2.jpg");
+        }
+        &:nth-child(2) {
+          background-image: url("../image/banner-bg-2.jpg");
+          &:hover {
+            background-image: url("../image/about-me-service-hov-3.jpg");
+          }
+        }
+        &:nth-child(3) {
+          background-image: url("../image/banner-bg-3.jpg");
+          &:hover {
+            background-image: url("../image/about-me-service-hov-3.jpg");
+          }
+        }
+        h3 {
+          margin: 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+#planning-stage {
+  padding: 9rem 0;
+
+  .cards {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 1rem;
+    row-gap: 4rem;
+    @media screen and (max-width: 1023px) {
+      grid-template-columns: auto;
+    }
+    .card {
+      display: flex;
+      gap: 1.5rem;
+
+      i {
+        font-size: 25px;
+      }
+      .content {
+        h3 {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+}
+
+#counter {
+  background-image: url("../image/home-3-parallax-1\ \(2\).jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  //   height: 60vh;
+  margin-bottom: 10rem;
+  padding: 10rem 0;
+
+  .container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    .counter {
+      color: #fff;
+      font-size: 60px;
+      font-weight: 200;
+      font-family: "Montserrat", sans-serif;
+      text-align: center;
+      line-height: 50px;
+    }
+  }
+}
+
