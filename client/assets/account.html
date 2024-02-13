@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MyAccount</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./sass/main.css" />
+    <script defer src="https://unpkg.com/scrollreveal"></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"
+    ></script>
+    <script defer src="./js/account.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="header">
+          <div class="left">
+            <span><a href="./index.html"> DØR</a></span>
+            <nav>
+              <ul>
+                <li><a href="./index.html">HOME</a></li>
+                <li><a href="./about.html">ABOUT</a></li>
+                <li><a href="">PORTOFOLIO</a></li>
+                <li><a href="">RENT</a></li>
+                <li><a href="./shop.html">SHOP</a></li>
+                <li><a href="">CONTACT</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="register">
+            <i class="fa-solid fa-user"></i>
+            <h5>Login / Register</h5>
+          </div>
+
+          <div class="icons">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-pinterest-p"></i>
+            <i class="fa-solid fa-basketball"></i>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <aside>
+      <div class="title">
+        <h4>DØR</h4>
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+      <div class="sign">
+        <h4>Sign in</h4>
+        <div class="label-input">
+          <label for="username"
+            ><h5>Username or email address <span>*</span></h5></label
+          >
+          <input id="username" type="text" />
+        </div>
+        <div class="label-input">
+          <label for="password"
+            ><h5>Password <span>*</span></h5></label
+          >
+          <input type="password" />
+        </div>
+        <div class="login">
+          <button type="submit" class="submit"><h6>Login in</h6></button>
+          <h6><a href="">Create an Account</a></h6>
+        </div>
+      </div>
+    </aside>
+
+    <section id="acount"></section>
+    <section id="account-content">
+      <div class="register" id="register">
+        <h4>REGISTER</h4>
+        <form>
+          <div class="label-input">
+            <label for="username"
+              ><h5>Username <span>*</span></h5></label
+            >
+            <input class="form-control" type="text" />
+          </div>
+          <div class="label-input">
+            <label for="username"
+              ><h5>Email address <span>*</span></h5></label
+            >
+            <input class="form-control" type="email" />
+          </div>
+          <div class="label-input">
+            <label for="password"
+              ><h5>Password <span>*</span></h5></label
+            >
+            <span class="password-wrap">
+              <input class="form-control password" type="password" />
+              <i class="fa-regular fa-eye-slash"></i
+            ></span>
+          </div>
+          <div class="login-btn">
+            <button type="submit" class="submit"><h6>Register</h6></button>
+            <!-- <h6><a href="./login.html">Create an Account</a></h6> -->
+          </div>
+        </form>
+      </div>
+
+      <div class="login" id="login">
+        <h4>LOGIN</h4>
+        <form id="form-login">
+          <div class="label-input">
+            <label for="username"
+              ><h5>Username or email address <span>*</span></h5></label
+            >
+            <input type="text"  class="login-input"/>
+          </div>
+          <div class="label-input">
+            <label for="password"
+              ><h5>Password <span>*</span></h5></label
+            >
+            <span class="password-wrap">
+              <input class="password-input" type="password" />
+              <i class="fa-regular fa-eye-slash icon"></i
+            ></span>
+          </div>
+          <div class="login-btn">
+            <button type="submit" class="submit"><h6>Login in</h6></button>
+            <h6><a href="./account.html">Create an Account</a></h6>
+          </div>
+        </form>
+      </div>
+
+      <div class="content">
+        <h4>LOGIN</h4>
+        <h6>
+          Registering for this site allows you to access your order status and
+          history. Just fill in the fields below, and we'll get a new account
+          set up for you in no time. We will only ask you for information
+          necessary to make the purchase process faster and easier.
+        </h6>
+        <button class="login-register-btn">Login</button>
+      </div>
+    </section>
+  </body>
+</html>

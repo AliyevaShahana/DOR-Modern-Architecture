@@ -1,0 +1,115 @@
+header {
+  position: static;
+}
+#shop {
+  .shop {
+    padding: 5rem 0;
+    display: flex;
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      width: 80%;
+      .card {
+        width: 25%;
+        position: relative;
+        .img-wrap {
+          width: 100%;
+          transition: all 1s;
+          position: relative;
+          display: inline-block;
+          width: 100%;
+          vertical-align: middle;
+          overflow: hidden;
+          .add-basket {
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            padding: 10px;
+            opacity: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            transition: opacity 0.2s ease-out;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            a {
+              color: #fff;
+              width: 10rem;
+              position: relative;
+              display: inline-block;
+              vertical-align: middle;
+              width: auto;
+              margin: 0;
+              font-size: 12px;
+              line-height: 2em;
+              letter-spacing: 0.25em;
+              font-weight: 700;
+              outline: 0;
+              box-sizing: border-box;
+              transition: color 0.2s ease-in-out,
+                background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+              cursor: pointer;
+              &:hover {
+                .pattern {
+                  background-position: 40px 0;
+                }
+              }
+
+              .pattern {
+                background-image: url("../image/simple_button_pattern.png");
+                background-repeat: repeat;
+                position: absolute;
+                right: 0;
+                bottom: 2px;
+                width: 100%;
+                height: 10px;
+                z-index: 1;
+                opacity: 0.7;
+                transition: 0.3s;
+              }
+              .text {
+                position: relative;
+                z-index: 2;
+                display: inline-block;
+                vertical-align: middle;
+              }
+            }
+          }
+          img {
+            width: 100%;
+          }
+          &:hover {
+            .add-basket {
+              opacity: 1;
+            }
+          }
+        }
+
+        .content {
+          text-align: center;
+          padding: 1rem;
+        }
+      }
+    }
+    .aside {
+      width: 20%;
+    }
+  }
+}
+// &:hover {
+//   &:before {
+//     content: "";
+//     position: absolute;
+//     background-color: rgba(0, 0, 0, 0.539);
+//     width: 100%;
+//     top: 0;
+//     bottom: 0;
+//     left: 0;
+//     z-index: 1;
+//   }
+// }
