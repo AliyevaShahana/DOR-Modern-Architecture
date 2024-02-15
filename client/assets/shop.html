@@ -48,7 +48,7 @@
     <script defer src="./js/shop.js"></script>
   </head>
   <body>
-    <header>
+    <section id="header">
       <div class="container">
         <div class="header">
           <div class="left">
@@ -71,7 +71,7 @@
           </div>
         </div>
       </div>
-    </header>
+    </section>
 
     <!-- <div class="card">
       <div class="img-wrap">
@@ -85,42 +85,314 @@
         <p>$132</p>
       </div>
     </div> -->
+    <section id="our-categories">
+      <div class="container">
+        <div class="our-categories">
+          <div class="title">
+            <h4>Our categories</h4>
+            <h3>Lots of new products and product collections</h3>
+          </div>
+          <div class="categories">
+            <div class="category">
+              <div class="category-wrap">
+                <div class="dark"></div>
+                <button>Chairs</button>
+                <h6>16 products</h6>
+              </div>
+            </div>
+            <div class="category">
+              <div class="category-wrap">
+                <div class="dark"></div>
+                <button>Tables</button>
+                <h6>16 products</h6>
+              </div>
+            </div>
+            <div class="category">
+              <div class="category-wrap">
+                <div class="dark"></div>
+                <button>Sofas</button>
+                <h6>16 products</h6>
+              </div>
+            </div>
+            <div class="category">
+              <div class="category-wrap">
+                <div class="dark"></div>
+                <button>Armchairs</button>
+                <h6>16 products</h6>
+              </div>
+            </div>
+            <div class="category">
+              <div class="category-wrap">
+                <div class="dark"></div>
+                <button>Beds</button>
+                <h6>16 products</h6>
+              </div>
+            </div>
 
+            <div class="category">
+              <div class="category-wrap">
+                <div class="dark"></div>
+                <button>Storage</button>
+                <h6>16 products</h6>
+              </div>
+            </div>
+            <div class="category">
+              <div class="category-wrap">
+                <div class="dark"></div>
+                <button>Lighting</button>
+                <h6>16 products</h6>
+              </div>
+            </div>
+            <div class="category">
+              <div class="category-wrap">
+                <div class="dark"></div>
+                <button>Decor</button>
+                <h6>16 products</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <section id="shop">
       <div class="container">
         <div class="shop">
-          <div class="products">
-            <!-- <div class="card">
-              <div class="img-wrap">
-                <div class="add-basket">
-                  <a href="">
-                    <span class="text">ADD TO CART</span>
-                    <span class="pattern"> </span>
-                  </a>
-                </div>
-                <img
-                  src="../assets/image/wd-furniture-armchairs-prod-5-1-350x400.jpg"
-                  alt=""
-                />
+          <div class="title">
+            <h4>Weekly bestsellers</h4>
+            <div class="aside">
+              <div class="categories">
+                <!-- <h3>CATEGORIES</h3> -->
+                <h3 class="allCategories">All</h3>
+                <h3 class="allCategories">Chairs</h3>
+                <h3 class="allCategories">Tables</h3>
+                <h3 class="allCategories">Sofas</h3>
+                <h3 class="allCategories">Armchairs</h3>
+                <h3 class="allCategories">Beds</h3>
+                <h3 class="allCategories">Storage</h3>
+                <h3 class="allCategories">Textiles</h3>
+                <h3 class="allCategories">Decor</h3>
               </div>
-              <div class="content">
-                <h3>VASEasa</h3>
-                <p>$132</p>
-              </div>
-            </div> -->
+            </div>
           </div>
 
-          <div class="aside">
-            <div class="categories">
-              <h3>CATEGORIES</h3>
-              <h5 class="allCategories">Chairs</h5>
-              <h5 class="allCategories">Tables</h5>
-              <h5 class="allCategories">Sofas</h5>
-              <h5 class="allCategories">Armchairs</h5>
-              <h5 class="allCategories">Beds</h5>
-              <h5 class="allCategories">Storage</h5>
-              <h5 class="allCategories">Textiles</h5>
-              <h5 class="allCategories">Decor</h5>
+          <div class="bottom">
+            <div class="products"></div>
+            <div class="aside-property">
+              <div class="filter-price">
+                <h3 class="filter-title">Filter By Price</h3>
+              </div>
+
+              <div class="filter-brand">
+                <h3 class="filter-title">Filter By Brand</h3>
+                <div class="input">
+                  <input type="search" placeholder="Find a Brand" />
+                  <svg
+                    xmlns="https://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    x="0px"
+                    y="0px"
+                    width="42px"
+                    height="42px"
+                    viewBox="0 0 42 42"
+                    enable-background="new 0 0 42 42"
+                    xml:space="preserve"
+                  >
+                    <g>
+                      <g>
+                        <g>
+                          <g>
+                            <path
+                              fill="#FFFFFF"
+                              stroke="#FFFFFF"
+                              stroke-width="0.5"
+                              stroke-miterlimit="10"
+                              d="M13.475,25.668
+                                        c-3.142,0-6.284-1.197-8.673-3.59c-4.785-4.782-4.785-12.564,0-17.347c4.78-4.783,12.563-4.786,17.346,0
+                                        c3.62,3.615,4.609,9.167,2.467,13.812c-0.174,0.383-0.626,0.549-1.014,0.377c-0.382-0.182-0.548-0.633-0.37-1.018
+                                        c1.872-4.065,1.005-8.928-2.161-12.093c-4.191-4.188-11.003-4.186-15.191,0c-4.186,4.188-4.186,11.002,0,15.19
+                                        c4.19,4.187,11,4.188,15.191,0c0.297-0.298,0.781-0.298,1.078,0c0.301,0.296,0.301,0.782,0,1.078
+                                        C19.757,24.471,16.615,25.668,13.475,25.668z"
+                            ></path>
+                          </g>
+                        </g>
+                      </g>
+                      <g>
+                        <g>
+                          <g>
+                            <path
+                              fill="#FFFFFF"
+                              stroke="#FFFFFF"
+                              stroke-width="0.5"
+                              stroke-miterlimit="10"
+                              d="M36.989,40.856
+                                        c-1.05,0-2.035-0.41-2.78-1.151l-8.489-8.491c-0.297-0.295-0.297-0.782,0-1.079c0.3-0.301,0.783-0.301,1.082,0l8.487,8.484
+                                        c0.907,0.911,2.493,0.915,3.402,0c0.454-0.452,0.707-1.053,0.707-1.7c0-0.641-0.253-1.244-0.707-1.696l-8.487-8.492
+                                        c-0.939-0.936-2.465-0.936-3.403,0c-0.299,0.302-0.782,0.302-1.082,0l-4.65-4.652c-0.3-0.296-0.3-0.782,0-1.078
+                                        c0.297-0.298,0.781-0.298,1.078,0l4.165,4.163c1.528-1.022,3.624-0.859,4.972,0.489l8.489,8.486
+                                        c0.742,0.745,1.151,1.732,1.151,2.78c0,1.051-0.409,2.038-1.151,2.786C39.03,40.446,38.042,40.856,36.989,40.856z"
+                            ></path>
+                          </g>
+                        </g>
+                      </g>
+                    </g>
+                  </svg>
+                </div>
+
+                <div class="brands-selector-wrap">
+                  <div class="brands-selector">
+                    <div class="brand-selec">
+                      <img
+                        src="./photo/wd-furniture-brand-enza-home.jpg"
+                        alt=""
+                      />
+                      <h3 class="brands-selector-h3">Enza Home</h3>
+                    </div>
+
+                    <div class="count brands-selector-count">6</div>
+                  </div>
+
+                  <div class="brands-selector">
+                    <div class="brand-selec">
+                      <img
+                        src="./photo/wd-furniture-brand-hay (1).jpg"
+                        alt=""
+                      />
+                      <h3 class="brands-selector-h3">Hay</h3>
+                    </div>
+                    <div class="count brands-selector-count">6</div>
+                  </div>
+
+                  <div class="brands-selector">
+                    <div class="brand-selec">
+                      <img src="./photo/wd-furniture-brand-vitra.jpg" alt="" />
+                      <h3 class="brands-selector-h3">Vitra</h3>
+                    </div>
+                    <div class="count brand brands-selector-count">6</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="color">
+                <h3 class="filter-title">Color</h3>
+
+                <div class="input">
+                  <input type="search" placeholder="Find a Color" />
+                  <svg
+                    xmlns="https://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    x="0px"
+                    y="0px"
+                    width="42px"
+                    height="42px"
+                    viewBox="0 0 42 42"
+                    enable-background="new 0 0 42 42"
+                    xml:space="preserve"
+                  >
+                    <g>
+                      <g>
+                        <g>
+                          <g>
+                            <path
+                              fill="#FFFFFF"
+                              stroke="#FFFFFF"
+                              stroke-width="0.5"
+                              stroke-miterlimit="10"
+                              d="M13.475,25.668
+                                      c-3.142,0-6.284-1.197-8.673-3.59c-4.785-4.782-4.785-12.564,0-17.347c4.78-4.783,12.563-4.786,17.346,0
+                                      c3.62,3.615,4.609,9.167,2.467,13.812c-0.174,0.383-0.626,0.549-1.014,0.377c-0.382-0.182-0.548-0.633-0.37-1.018
+                                      c1.872-4.065,1.005-8.928-2.161-12.093c-4.191-4.188-11.003-4.186-15.191,0c-4.186,4.188-4.186,11.002,0,15.19
+                                      c4.19,4.187,11,4.188,15.191,0c0.297-0.298,0.781-0.298,1.078,0c0.301,0.296,0.301,0.782,0,1.078
+                                      C19.757,24.471,16.615,25.668,13.475,25.668z"
+                            ></path>
+                          </g>
+                        </g>
+                      </g>
+                      <g>
+                        <g>
+                          <g>
+                            <path
+                              fill="#FFFFFF"
+                              stroke="#FFFFFF"
+                              stroke-width="0.5"
+                              stroke-miterlimit="10"
+                              d="M36.989,40.856
+                                      c-1.05,0-2.035-0.41-2.78-1.151l-8.489-8.491c-0.297-0.295-0.297-0.782,0-1.079c0.3-0.301,0.783-0.301,1.082,0l8.487,8.484
+                                      c0.907,0.911,2.493,0.915,3.402,0c0.454-0.452,0.707-1.053,0.707-1.7c0-0.641-0.253-1.244-0.707-1.696l-8.487-8.492
+                                      c-0.939-0.936-2.465-0.936-3.403,0c-0.299,0.302-0.782,0.302-1.082,0l-4.65-4.652c-0.3-0.296-0.3-0.782,0-1.078
+                                      c0.297-0.298,0.781-0.298,1.078,0l4.165,4.163c1.528-1.022,3.624-0.859,4.972,0.489l8.489,8.486
+                                      c0.742,0.745,1.151,1.732,1.151,2.78c0,1.051-0.409,2.038-1.151,2.786C39.03,40.446,38.042,40.856,36.989,40.856z"
+                            ></path>
+                          </g>
+                        </g>
+                      </g>
+                    </g>
+                  </svg>
+                </div>
+
+                <div class="color-selector-wrap-scroll">
+                  <div class="color-selector-wrap">
+                    <div class="color-selector">
+                      <div class="border"><div class="color"></div></div>
+                      <h3>American Silver</h3>
+                      <div class="count">2</div>
+                    </div>
+                    <div class="color-selector">
+                      <div class="border"><div class="color"></div></div>
+                      <h3>Bone</h3>
+                      <div class="count color-count">2</div>
+                    </div>
+                    <div class="color-selector">
+                      <div class="border"><div class="color"></div></div>
+                      <h3>Brown Sugar</h3>
+                      <div class="count color-count">2</div>
+                    </div>
+                    <div class="color-selector">
+                      <div class="border"><div class="color"></div></div>
+                      <h3>Dark Gray</h3>
+                      <div class="count color-count">2</div>
+                    </div>
+                    <div class="color-selector">
+                      <div class="border"><div class="color"></div></div>
+                      <h3>French Bistre</h3>
+                      <div class="count color-count">2</div>
+                    </div>
+                    <div class="color-selector">
+                      <div class="border"><div class="color"></div></div>
+                      <h3>Gray</h3>
+                      <div class="count color-count">2</div>
+                    </div>
+                    <div class="color-selector">
+                      <div class="border"><div class="color"></div></div>
+                      <h3>Green</h3>
+                      <div class="count color-count">2</div>
+                    </div>
+
+                    <div class="color-selector">
+                      <div class="border"><div class="color"></div></div>
+                      <h3>White</h3>
+                      <div class="count color-count">2</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="materials-wrap">
+                <h3 class="filter-title">Materials</h3>
+                <div class="material">
+                  <div class="input">
+                    <input type="checkbox" id="fabric" />
+                    <label for="fabric"><h3>Fabric</h3> </label>
+                  </div>
+                  <div class="count material">16</div>
+                </div>
+                <div class="material">
+                  <div class="input">
+                    <input type="checkbox" id="wood" />
+                    <label for="wood"><h3>Wood</h3></label>
+                  </div>
+                  <div class="count material">16</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -77,11 +77,11 @@ form.addEventListener("submit", function (e) {
   //     await axios.post(`${BASE_URL}/sign`, obj);
   //   }
   //   addToData(userObj);
-  if(  ){
+  // if(  ){
 
-  } else {
-    window.alert("username or email already used");
-  }
+  // } else {
+  //   window.alert("username or email already used");
+  // }
 
   allInputs.forEach((item) => {
     item.value = "";
@@ -101,8 +101,8 @@ formLogin.addEventListener("submit", function (e) {
 
   let user = users.find(
     (item) =>
-      item.userName === loginInputs.value &&    
-      item.password === passwordInputs.value     
+      item.userName === loginInputs.value &&
+      item.password === passwordInputs.value
   );
   if (user) {
     console.log(user);
@@ -117,5 +117,3 @@ formLogin.addEventListener("submit", function (e) {
     item.value = "";
   });
 });
-
-

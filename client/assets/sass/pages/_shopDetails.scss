@@ -165,6 +165,42 @@
             align-items: center;
             gap: 1rem;
             cursor: pointer;
+            position: relative;
+            display: flex;
+            // border-bottom: 1px solid #000;
+            cursor: pointer;
+            &:hover {
+              // border-bottom: 1px solid #fff;
+              &:after {
+                width: 100%;
+              }
+              &:before {
+                width: 100%;
+              }
+            }
+            &:after {
+              content: "";
+              position: absolute;
+              top: 100%;
+              left: 0;
+              width: 0%;
+              height: 0.5px;
+              z-index: 11;
+              background-color: #fff;
+              transition: width 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+            }
+            &:before {
+              content: "";
+              position: absolute;
+              top: 120%;
+              left: 0;
+              width: 0%;
+              height: 0.5px;
+              z-index: 11;
+              background-color: #fff;
+              transition: width 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+            }
+            transition: all 0.3s;
             h3 {
               font-weight: 600;
             }
