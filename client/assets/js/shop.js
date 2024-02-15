@@ -107,16 +107,17 @@ function drawCard(data) {
 
     // -----------------------------------------------------------------
     // BASKET
+    let basketCount = document.querySelector(".basket-count");
+    let basketProduct = getDataFromLocaleBasket();
 
-    // function bsktCount() {
-    //   basketCount.innerText = basketProduct.reduce(
-    //     (sum, item) => sum + item.count,
-    //     0
-    //   );
-    //   setDataToLocaleBasket(basketProduct);
-    // }
-    // bsktCount();
-    // let basketProduct = getDataFromLocaleBasket();
+    function bsktCount() {
+      basketCount.innerText = basketProduct.reduce(
+        (sum, item) => sum + item.count,
+        0
+      );
+      setDataToLocaleBasket(basketProduct);
+    }
+    bsktCount();
 
     aHrefAddBasket.addEventListener("click", function () {
       let basket = getDataFromLocaleBasket();
@@ -127,13 +128,13 @@ function drawCard(data) {
       } else {
         basket.push({ count: 1, product: element });
       }
-      // function bsktCount() {
-      //   basketCount.innerText = basket.reduce(
-      //     (sum, item) => sum + item.count,
-      //     0
-      //   );
-      // }
-      // bsktCount();
+      function bsktCount() {
+        basketCount.innerText = basket.reduce(
+          (sum, item) => sum + item.count,
+          0
+        );
+      }
+      bsktCount();
       setDataToLocaleBasket(basket);
     });
     function setDataToLocaleBasket(basket) {
@@ -142,7 +143,6 @@ function drawCard(data) {
     function getDataFromLocaleBasket() {
       return JSON.parse(localStorage.getItem("basket")) ?? [];
     }
-
   });
 }
 

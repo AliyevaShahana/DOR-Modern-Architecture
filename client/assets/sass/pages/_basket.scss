@@ -1,0 +1,180 @@
+#header {
+  // position: fixed;
+  z-index: 111;
+  background-color: black;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  .header {
+    display: flex;
+    gap: 3rem;
+    padding: 2rem 0;
+    align-items: center;
+    justify-content: space-between;
+
+    .left {
+      display: flex;
+      gap: 3rem;
+      align-items: center;
+      justify-content: space-between;
+      span {
+        a {
+          font-weight: 300;
+          font-size: 28px;
+          line-height: 28px;
+        }
+      }
+      nav {
+        ul {
+          display: flex;
+          gap: 3rem;
+        }
+      }
+    }
+
+    .icons {
+      display: flex;
+      color: #fff;
+      gap: 2rem;
+      i {
+        font-size: 15px;
+        sup {
+          font-size: 10px;
+          border: 1px solid;
+          background: #fff;
+          color: #000;
+          border-radius: 10px;
+          padding: 1px 3px;
+        }
+      }
+    }
+  }
+}
+
+#cart {
+  background-image: url("https://dor.qodeinteractive.com/elementor/wp-content/uploads/2019/03/title-image.jpg");
+  height: 250px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+
+  padding: 7rem;
+}
+#cart-table {
+  //   height: 1200vh;
+  padding: 8rem 0;
+  td,
+  h3 {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    font-family: "Montserrat", sans-serif;
+    vertical-align: middle;
+  }
+  .inc-dec {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    cursor: pointer;
+  }
+  .fa-xmark {
+    color: #fff;
+  }
+  h1 {
+    font-size: 28px;
+    display: inline-block;
+  }
+  h2 {
+    font-size: 25px;
+    display: inline-block;
+  }
+  img {
+    width: 4rem;
+  }
+  th {
+    padding: 1rem;
+    text-align: center;
+  }
+  tr {
+    border-bottom: 1px solid grey;
+    vertical-align: middle;
+    padding: 1rem;
+    text-align: center;
+  }
+  table {
+    width: 100%;
+  }
+  .td-photo {
+    padding: 1rem 0;
+  }
+  .removed {
+    border: 1px solid rgba(128, 128, 128, 0.667);
+    padding: 2rem;
+    width: 100%;
+    opacity: 0;
+    margin-bottom: 2rem;
+  }
+  .card-total {
+    padding: 3rem 0;
+    .subtotal,
+    .subtotal-one {
+      display: flex;
+      border-bottom: 1px solid gray;
+      gap: 15rem;
+      margin-bottom: 2rem;
+
+      h6 {
+        padding: 1rem 0;
+      }
+    }
+    .subtotal-one {
+      gap: 16.8rem;
+    }
+    a {
+      color: #fff;
+      position: relative;
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0;
+      font-size: 12px;
+      line-height: 2em;
+      letter-spacing: 0.25em;
+      font-weight: 700;
+      outline: 0;
+      box-sizing: border-box;
+      width: 13rem;
+      transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out,
+        border-color 0.2s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        .pattern {
+          background-position: 30px 0;
+        }
+      }
+
+      .pattern {
+        background-image: url("../image/simple_button_pattern.png");
+        background-repeat: repeat;
+        position: absolute;
+        right: 0px;
+        bottom: 2px;
+        width: 100%;
+        height: 10px;
+        z-index: 1;
+        opacity: 0.7;
+        transition: 0.3s;
+      }
+      .text {
+        position: relative;
+        z-index: 2;
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+  }
+}
