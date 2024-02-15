@@ -11,13 +11,26 @@ const getAllSignUsers = async (req, res) => {
 };
 
 const addNewSignUsers = async (req, res) => {
-
   const newSignUsers = new SignUsers({ ...req.body });
   try {
     await newSignUsers.save();
     res.status(201).send({
       message: "created succesfully!",
       data: newSignUsers,
+    });
+  } catch (error) {
+    res.status(500).send({ message: error.message });
+  }
+};
+
+const updateUsersById = async (req, res) => {
+  const { id } = req.params;
+  try {
+    await SignUsers.findByIdAndUpdate(id, { ...req.body });
+    const updatedProduct = await SignUsers.findById(id);
+    res.status(200).send({
+      message: "updated succesfully!",
+      data: updatedProduct,
     });
   } catch (error) {
     res.status(500).send({ message: error.message });
@@ -83,8 +96,8 @@ const signin = async (req, res) => {
   try {
     const user = await SignUsers.findOne({ email: email, password: password });
     if (!user) {
-       res.status(400).send({ message: "Wrong email or password" });
-       return;
+      res.status(400).send({ message: "Wrong email or password" });
+      return;
     }
 
     res.status(200).send({ message: "Login successful!" });
@@ -92,15 +105,6 @@ const signin = async (req, res) => {
     res.status(500).send({ message: "An error occurred" });
   }
 };
-
-module.exports = {
-  getAllSignUsers,
-  addNewSignUsers,
-  signup,
-  signin,
-  deleteUsersById
-};
-
 
 // const logout = async (req, res) => {
 //   try {
@@ -111,3 +115,12 @@ module.exports = {
 //   }
 // };
 
+module.exports = {
+  getAllSignUsers,
+  addNewSignUsers,
+  signup,
+  signin,
+  deleteUsersById,
+  updateUsersById,
+  // logout
+};

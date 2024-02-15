@@ -12,6 +12,11 @@
     />
     <link
       rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <link
+      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
     />
     <link
@@ -103,10 +108,11 @@
         </div>
       </div>
     </aside>
+    <!-- REGISTER----------------------------- -->
 
     <section id="acount"></section>
     <section id="account-content">
-      <div class="register" id="register">
+      <div class="register" style="display: none" id="register">
         <h4>REGISTER</h4>
         <form>
           <div class="label-input">
@@ -132,19 +138,18 @@
           </div>
           <div class="login-btn">
             <button type="submit" class="submit"><h6>Register</h6></button>
-            <!-- <h6><a href="./login.html">Create an Account</a></h6> -->
           </div>
         </form>
       </div>
-
-      <div class="login" id="login">
+      <!-- LOGIN----------------------------- -->
+      <div class="login" id="login" style="display: block">
         <h4>LOGIN</h4>
         <form id="form-login">
           <div class="label-input">
             <label for="username"
               ><h5>Username or email address <span>*</span></h5></label
             >
-            <input type="text"  class="login-input"/>
+            <input type="text" class="login-input" />
           </div>
           <div class="label-input">
             <label for="password"

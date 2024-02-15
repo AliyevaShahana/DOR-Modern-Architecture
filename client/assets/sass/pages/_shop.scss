@@ -38,7 +38,15 @@
       color: #fff;
       gap: 2rem;
       i {
-        font-size: 14px;
+        font-size: 20px;
+        sup {
+          font-size: 10px;
+          border: 1px solid;
+          background: #fff;
+          color: #000;
+          border-radius: 10px;
+          padding: 1px 3px;
+        }
       }
     }
   }
@@ -275,7 +283,8 @@
               flex-direction: column;
               align-items: center;
               justify-content: center;
-              .fa-heart {
+              .fa-heart,
+              .fa-check {
                 position: absolute;
                 z-index: 22;
                 top: 10px;
@@ -283,6 +292,7 @@
                 font-size: 20px;
                 color: #ffffffdd;
               }
+
               .fa-arrow-up-long {
                 position: absolute;
 

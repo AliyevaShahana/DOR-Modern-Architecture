@@ -68,9 +68,87 @@ function drawCard(data) {
     aHrefAddBasket.append(spanText, spanPattern);
     card.append(imgWrap, content);
     allProducts.append(card);
+    // -----------------------------------------------------------------
+    // WISHLIST
+
+    let favoritesProduct = getDataFromLocale();
+
+    let favObj = favoritesProduct.find((item) => item.id === element._id);
+    heartIcon.className = favObj ? "fa-solid fa-check" : "fa-regular fa-heart";
+
+    // wishlistCount.innerText = favoritesProduct.length;
+
+    heartIcon.addEventListener("click", function () {
+      this.className === "fa-regular fa-heart"
+        ? (this.className = "fa-solid fa-check")
+        : (this.className = "fa-regular fa-heart");
+
+      let favorites = getDataFromLocale();
+      let index = favorites.findIndex((item) => item._id === element._id);
+      console.log(favorites);
+
+      if (index === -1) {
+        console.log(index);
+        favorites.push(element);
+      } else {
+        favorites = favorites.filter((item) => item.id !== element._id);
+      }
+
+      // wishlistCount.innerText = favorites.length;
+      setDataToLocale(favorites);
+    });
+
+    function setDataToLocale(favorites) {
+      localStorage.setItem("favorites", JSON.stringify(favorites));
+    }
+    function getDataFromLocale() {
+      return JSON.parse(localStorage.getItem("favorites")) ?? [];
+    }
+
+    // -----------------------------------------------------------------
+    // BASKET
+
+    // function bsktCount() {
+    //   basketCount.innerText = basketProduct.reduce(
+    //     (sum, item) => sum + item.count,
+    //     0
+    //   );
+    //   setDataToLocaleBasket(basketProduct);
+    // }
+    // bsktCount();
+    // let basketProduct = getDataFromLocaleBasket();
+
+    aHrefAddBasket.addEventListener("click", function () {
+      let basket = getDataFromLocaleBasket();
+
+      let index = basket.findIndex((item) => item.product._id === element._id);
+      if (index > -1) {
+        basket[index].count = basket[index].count + 1;
+      } else {
+        basket.push({ count: 1, product: element });
+      }
+      // function bsktCount() {
+      //   basketCount.innerText = basket.reduce(
+      //     (sum, item) => sum + item.count,
+      //     0
+      //   );
+      // }
+      // bsktCount();
+      setDataToLocaleBasket(basket);
+    });
+    function setDataToLocaleBasket(basket) {
+      localStorage.setItem("basket", JSON.stringify(basket));
+    }
+    function getDataFromLocaleBasket() {
+      return JSON.parse(localStorage.getItem("basket")) ?? [];
+    }
+
   });
 }
 
+// -----------------------------------------------------------------
+
+// -----------------------------------------------------------------
 allCategories.forEach((btn) => {
   btn.addEventListener("click", function () {
     let filtered = categoriesCopy.filter(

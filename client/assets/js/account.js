@@ -2,15 +2,18 @@ let loginRegisterBtn = document.querySelector(".login-register-btn");
 let login = document.querySelector("#login");
 let register = document.querySelector("#register");
 
-loginRegisterBtn.addEventListener("click", function () {
-  if (login.style.display === "none") {
-    register.style.display = "none";
-    login.style.display = "block";
-  } else {
-    register.style.display = "block";
-    login.style.display = "none ";
-  }
-});
+function click() {
+  loginRegisterBtn.addEventListener("click", function () {
+    if (login.style.display === "none") {
+      register.style.display = "none";
+      login.style.display = "block";
+    } else {
+      register.style.display = "block";
+      login.style.display = "none ";
+    }
+  });
+}
+click();
 // =========================================================
 // EYE ICON
 
@@ -41,79 +44,133 @@ eyeIconLogin.addEventListener("click", function () {
 });
 
 // =========================================================
-
+// REGISTER
 let form = document.querySelector("form");
 let allInputs = document.querySelectorAll(".form-control");
 const BASE_URL = "http://localhost:8080";
 let users = [];
 
-async function getAllData() {
-  try {
-    const res = await axios(`${BASE_URL}/sign`);
-    users = res.data;
-  } catch (error) {
-    console.log(error);
-  }
-}
-getAllData();
+// async function getAllData() {
+//   try {
+//     const res = await axios(`${BASE_URL}/sign/`);
+//     users = res.data;
+//     // console.log(res.data);
+//   } catch (error) {
+//     console.log(error);
+//   }
+// }
+// getAllData();
 
-form.addEventListener("submit", function (e) {
-  e.preventDefault();
+// form.addEventListener("submit", async function (e) {
+//   e.preventDefault();
 
-  // let bool = users.some(
-  //   (item) =>
-  //     item.userName === allInputs[0].value || item.email === allInputs[1].value
-  // );
-  // if (!bool) {
-  //   let userObj = {
-  //     userName: allInputs[0].value,
-  //     email: allInputs[1].value,
-  //     password: allInputs[2].value,
-  //     isAdmin: false,
-  //     //   id: Date.now(),
-  //   };
-  //   console.log(users);
-  //   async function addToData(obj) {
-  //     await axios.post(`${BASE_URL}/sign`, obj);
-  //   }
-  //   addToData(userObj);
-  // if(  ){
+//   let bool = users.some(
+//     (item) =>
+//       item.userName === allInputs[0].value || item.email === allInputs[1].value
+//   );
 
-  // } else {
-  //   window.alert("username or email already used");
-  // }
+//   let userObj = {
+//     userName: allInputs[0].value,
+//     email: allInputs[1].value,
+//     password: allInputs[2].value,
+//     isAdmin: false,
+//   };
 
-  allInputs.forEach((item) => {
-    item.value = "";
-  });
+//   if (!bool) {
+//     let res = await axios.post(`${BASE_URL}/sign/signup`, userObj);
+//     if (res.status === 201) {
+//       allInputs.forEach((item) => (item.value = ""));
 
-  //   window.location = "login.html";
-});
+//       Toastify({
+//         text: "Registration completed successfully!",
+//         duration: 3000,
+//         close: true,
+//         gravity: "top",
+//         position: "right",
+//         backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+//       }).showToast();
+
+//       // window.location = "login.html";
+//       click();
+//       return;
+//     } else {
+//       Toastify({
+//         text: "Email is used!",
+//         duration: 3000,
+//         close: true,
+//         gravity: "top",
+//         position: "right",
+//         backgroundColor: "linear-gradient(to right, red, #96c93d)",
+//       }).showToast();
+//     }
+//   } else {
+//     Swal.fire({
+//       icon: "error",
+//       title: "Oops...",
+//       text: "Please fill in all fields..",
+//     });
+//   }
+// });
 
 // =========================================================
+// LOGIN
 
 let formLogin = document.querySelector("#form-login");
 let loginInputs = document.querySelector(".login-input");
 let passwordInputs = document.querySelector(".password-input");
 
-formLogin.addEventListener("submit", function (e) {
+formLogin.addEventListener("submit", async function (e) {
   e.preventDefault();
 
-  let user = users.find(
-    (item) =>
-      item.userName === loginInputs.value &&
-      item.password === passwordInputs.value
-  );
-  if (user) {
-    console.log(user);
+  let newObj = {
+    email: loginInputs.value,
+    password: passwordInputs.value,
+  };
+  let boolSeconf;
+  if (loginInputs.value || passwordInputs.value) {
+    const res = await axios.post(`${BASE_URL}/sign/signin`, newObj);
 
-    // localStorage.setItem("userName", user.userName);
-    //   window.location = "home.html";
+    if (res.status === 200) {
+      if (!res.data.isAdmin) {
+        window.location.href = "admin.html";
+      } else {
+        localStorage.setItem("isAdmin", true);
+        console.log("index e get");
+        window.location.href = "index.html";
+      }
+      loginInputs.value = "";
+      passwordInputs.value = "";
+
+      Toastify({
+        text: "Login completed successfully.",
+        duration: 3000,
+        close: true,
+        gravity: "top",
+        position: "right",
+        backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+      }).showToast();
+
+      // localStorage.setItem("login", true);
+      return;
+    } else {
+      Toastify({
+        text: "Wrong email or password!",
+        duration: 3000,
+        close: true,
+        gravity: "top",
+        position: "right",
+        backgroundColor: "linear-gradient(to right, red, #96c93d)",
+      }).showToast();
+      return;
+    }
   } else {
-    window.alert("username or password is not correct!!");
+    Toastify({
+      text: "fill in all fields",
+      duration: 3000,
+      close: true,
+      gravity: "top",
+      position: "right",
+      backgroundColor: "linear-gradient(to right, #FF5F6D, #FFC371)",
+    }).showToast();
   }
-
-  allInputs.forEach((item) => {
-    item.value = "";
-  });
 });
