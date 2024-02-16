@@ -2807,4 +2807,43 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+}
+
+#project .project {
+  padding: 2rem 0;
+}
+#project .project .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+#project .project .title .img-div {
+  width: 40vw;
+}
+#project .project .title .img-div img {
+  width: 100%;
+}
+#project .project .title .table-info {
+  border-bottom: 1px solid gray;
+  padding: 0 0 2rem 0;
+}
+#project .project .title .table-info table td {
+  padding: 1rem 2rem 0 0;
+}
+#project .project .title .table-info table th {
+  padding: 0 2rem 0 0;
+}
+#project .project .title .table-info table th h3 {
+  color: rgba(255, 255, 255, 0.662);
+}
+#project .project .title .description {
+  width: 20vw;
+  padding: 3rem 0;
+}
+#project .project .top-img {
+  padding: 2rem 0;
+  width: 100%;
+}
+#project .project .top-img img {
+  width: 30%;
 }/*# sourceMappingURL=main.css.map */

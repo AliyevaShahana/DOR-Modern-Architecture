@@ -1,0 +1,46 @@
+#project {
+  .project {
+    padding: 2rem 0;
+    .title {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      .img-div {
+        width: 40vw;
+        img {
+          width: 100%;
+        }
+      }
+      .table-info {
+        border-bottom: 1px solid gray;
+        padding: 0 0 2rem 0;
+        table {
+          td {
+            padding: 1rem 2rem 0 0;
+          }
+          th {
+            padding: 0 2rem 0 0;
+          }
+          th {
+            h3 {
+              color: rgba(255, 255, 255, 0.662);
+            }
+          }
+        }
+      }
+      .description {
+        width: 20vw;
+        padding: 3rem 0;
+      }
+    }
+
+    .top-img {
+      padding: 2rem 0;
+      width: 100%;
+
+      img {
+        width: 30%;
+      }
+    }
+  }
+}

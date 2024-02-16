@@ -12,7 +12,7 @@ const productSchema = new Schema(
     //   videoPhoto: { type: String, required: true },
     //   imageOne: { type: String, required: true },
     //   imageTwo: { type: String, required: true },
-    // },
+    // }, 
     description: { type: String, required: true },
     // details: {
     //   brand: { type: String, required: true },

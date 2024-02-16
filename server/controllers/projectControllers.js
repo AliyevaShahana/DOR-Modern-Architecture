@@ -1,10 +1,10 @@
-const Products = require("../models/productModel");
+const Projects = require("../models/projectModel");
 
 //get all products
 const getAllProducts = async (req, res) => {
   try {
-    const products = await Products.find({});
-    res.send(products).status(200);
+    const projects = await Projects.find({});
+    res.send(projects).status(200);
   } catch (error) {
     res.status(500).send({ message: error.message });
   }
@@ -15,7 +15,7 @@ const getAllProducts = async (req, res) => {
 const getProductById = async (req, res) => {
   const { id } = req.params;
   try {
-    const product = await Products.findById(id);
+    const product = await Projects.findById(id);
     res.send(product).status(200);
   } catch (error) {
     res.status(500).send({ message: error.message });
@@ -27,8 +27,8 @@ const getProductById = async (req, res) => {
 const deleteProductById = async (req, res) => {
   const { id } = req.params;
   try {
-    const deletedProduct = await Products.findByIdAndDelete(id);
-    const products = await Products.find({});
+    const deletedProduct = await Projects.findByIdAndDelete(id);
+    const products = await Projects.find({});
     // res.status(200).send(products);
     // res.status(200).send(deletedProduct);
     res.status(200).json({
@@ -52,25 +52,25 @@ const addNewProduct = async (req, res) => {
   //   image,
   // });
 
-  const newProduct = new Products({ ...req.body });
+  const newProject = new Projects({ ...req.body });
   try {
-    await newProduct.save();
+    await newProject.save();
     res.status(201).send({
       message: "created succesfully!",
-      data: newProduct,
+      data: newProject,
     });
   } catch (error) {
     res.status(500).send({ message: error.message });
   }
-}; 
+};
 
 // update data, put
 
 const updateProductById = async (req, res) => {
   const { id } = req.params;
   try {
-    await Products.findByIdAndUpdate(id, { ...req.body });
-    const updatedProduct = await Products.findById(id);
+    await Projects.findByIdAndUpdate(id, { ...req.body });
+    const updatedProduct = await Projects.findById(id);
     res.status(200).send({
       message: "updated succesfully!",
       data: updatedProduct,

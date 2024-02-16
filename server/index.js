@@ -5,6 +5,7 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 const router = require("./routes/productRoute");
 const routerSign = require("./routes/signRouter");
+const routerProjects = require("./routes/projectRoute");
 
 const PORT = 8080;
 const DB_URL = "mongodb+srv://shahana:shahana7@cluster0.td6cyoq.mongodb.net/";
@@ -14,7 +15,8 @@ app.use(bodyParser.urlencoded({ limit: "50mb", extended: true }));
 app.use(bodyParser.json({ limit: "50mb" }));
 
 app.use("/products", router);
-app.use("/sign", routerSign);
+app.use("/", routerSign);
+app.use("/projects", routerProjects);
 
 mongoose
   .connect(DB_URL)
