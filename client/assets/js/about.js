@@ -1,10 +1,10 @@
 $(".owl-carousel").owlCarousel({
-  autoplay:true,
-  rewind:true,
-  responsiveClass:true,
-  autoHeight:true,
-  autoplayTimeout:7000,
-  smartSpeed:800,
+  autoplay: true,
+  rewind: true,
+  responsiveClass: true,
+  autoHeight: true,
+  autoplayTimeout: 7000,
+  smartSpeed: 800,
   loop: true,
   margin: 10,
   responsiveClass: true,
@@ -49,4 +49,26 @@ window.addEventListener("scroll", function () {
       }, duration);
     });
   }
+});
+
+let register = document.querySelector(".register");
+let aside = document.querySelector("aside");
+let menuAside = document.querySelector("#menu-aside");
+let xMark = document.querySelector(".fa-xmark");
+let xmark = document.querySelector(".xmark");
+let menu = document.querySelector("#menu");
+
+register.addEventListener("click", function () {
+  aside.style.transform = "translateX(0rem)";
+});
+menu.addEventListener("click", function () {
+  menuAside.style.transform = "translateX(0rem)";
+});
+
+xMark.addEventListener("click", function () {
+  // aside.style.transform = "translateX(28rem)";
+  menuAside.style.transform = "translateX(28rem)";
+});
+xmark.addEventListener("click", function () {
+  aside.style.transform = "translateX(28rem)";
 });

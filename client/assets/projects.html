@@ -45,26 +45,32 @@
       defer
       src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"
     ></script>
-    <script defer src="./js/shop.js"></script>
+    <script defer src="./js/projects.js"></script>
   </head>
   <body>
-    <section id="header">
+    <header>
       <div class="container">
         <div class="header">
           <div class="left">
-            <span><a href="./index.html"> DØR</a></span>
+            <div class="head">
+              <a href="./index.html"> DØR</a>
+              <i class="fa-solid fa-bars" id="menu"></i>
+            </div>
             <nav>
               <ul>
                 <li><a href="./index.html">HOME</a></li>
                 <li><a href="./about.html">ABOUT</a></li>
-                <li><a href="./projects.html">Projects</a></li>
-
-                <li><a href="">RENT</a></li>
+                <li><a href="./projects.html">PROJECTS</a></li>
                 <li><a href="./shop.html">SHOP</a></li>
-                <li><a href="./shopDetails.html">CONTACT</a></li>
+                <li><a href="">CONTACT</a></li>
               </ul>
             </nav>
           </div>
+          <div class="register">
+            <i class="fa-solid fa-user"></i>
+            <h5>Register</h5>
+          </div>
+
           <div class="icons">
             <i class="fa-brands fa-facebook-f"></i>
             <i class="fa-brands fa-pinterest-p"></i>
@@ -72,8 +78,48 @@
           </div>
         </div>
       </div>
+    </header>
+
+    <section id="menu-aside">
+      <div class="title">
+        <h4>DØR</h4>
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+      <div class="sign">
+        <nav>
+          <ul>
+            <li><a href="./index.html">HOME</a></li>
+            <li><a href="./about.html">ABOUT</a></li>
+            <li><a href="./projects.html">PROJECTS</a></li>
+            <li><a href="./shop.html">SHOP</a></li>
+            <li><a href="">CONTACT</a></li>
+          </ul>
+        </nav>
+        <div class="register">
+          <i class="fa-solid fa-user"></i>
+          <h5>Login / Register</h5>
+        </div>
+        <div class="icons">
+          <i class="fa-brands fa-facebook-f"></i>
+          <i class="fa-brands fa-pinterest-p"></i>
+          <i class="fa-solid fa-basketball"></i>
+        </div>
+      </div>
     </section>
 
+    <section id="portfolio">
+      <div class="container">
+        <div class="portfolio">
+          <h2>PROJECTS</h2>
+          <h3>
+            Our projects are a testament to the studio’s commitment to cultural
+            exploration, innovation, and the power of nature. Each project is a
+            unique reflection of the client’s needs and MAKHNO’s vision,
+            resulting in spaces that are both stunning and meaningful.
+          </h3>
+        </div>
+      </div>
+    </section>
     <section id="projects">
       <div class="container">
         <div class="projects">
@@ -93,5 +139,18 @@
         </div>
       </div>
     </section>
+    <footer>
+      <div class="container">
+        <div class="footer">
+          <h4>DØR</h4>
+          <h3>© 2019 Qode Interactive, All Rights Reserved</h3>
+          <div class="icons">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-pinterest-p"></i>
+            <i class="fa-solid fa-basketball"></i>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

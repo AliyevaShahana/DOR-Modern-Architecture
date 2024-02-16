@@ -10,6 +10,7 @@ const projectSchema = new Schema(
     location: { type: String, required: true },
     area: { type: String, required: true },
     description: { type: String, required: true },
+    imgUrl: { type: String, required: true },
     photos: {
       main: { type: String, required: true },
       one: { type: String, required: true },

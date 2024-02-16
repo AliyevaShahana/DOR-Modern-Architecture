@@ -49,8 +49,10 @@
     position: absolute;
     bottom: -160px;
     width: 100%;
+    z-index: -111;
     @media screen and (max-width: 1023px) {
       bottom: -102rem;
+      opacity: 0.7;
     }
     @media screen and (max-width: 767px) {
       bottom: -78rem;
@@ -163,6 +165,9 @@
     align-items: center;
     justify-content: center;
     gap: 5rem;
+    @media screen and (max-width: 1023px) {
+      grid-template-columns: auto;
+    }
     .counter {
       color: #fff;
       font-size: 60px;
@@ -195,6 +200,7 @@
       margin: 0 -10px 0 0;
       width: calc(50% + 10px);
       display: block;
+
       touch-action: manipulation;
       .owl-stage {
         width: 100%;
@@ -378,6 +384,7 @@
       @media screen and (max-width: 1023px) {
         // left: 0;
         // top: 19rem;
+        width: 80%;
         margin: 0;
       }
       h5 {

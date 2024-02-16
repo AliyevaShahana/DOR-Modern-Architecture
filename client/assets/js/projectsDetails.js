@@ -40,14 +40,12 @@ $(document).ready(function () {
 
 const projects = document.querySelector(".project");
 const imgDiv = document.querySelector(".img-div");
-
+const id = new URLSearchParams(window.location.search).get("id");
 const BASE_URL = "http://localhost:8080";
 
 async function getAllData() {
   try {
-    const res = await axios(`${BASE_URL}/projects/65cf1c7f87f8654475ef9445`);
-    console.log(res.data);
-    // categoriesCopy = res.data;
+    const res = await axios(`${BASE_URL}/projects/${id}`);
     drawCards(res.data);
   } catch (error) {
     console.log(error);
@@ -99,3 +97,25 @@ function drawCards(element) {
   </div>
     `;
 }
+
+let register = document.querySelector(".register");
+let aside = document.querySelector("aside");
+let menuAside = document.querySelector("#menu-aside");
+let xMark = document.querySelector(".fa-xmark");
+let xmark = document.querySelector(".xmark");
+let menu = document.querySelector("#menu");
+
+register.addEventListener("click", function () {
+  aside.style.transform = "translateX(0rem)";
+});
+menu.addEventListener("click", function () {
+  menuAside.style.transform = "translateX(0rem)";
+});
+
+xMark.addEventListener("click", function () {
+  // aside.style.transform = "translateX(28rem)";
+  menuAside.style.transform = "translateX(28rem)";
+});
+xmark.addEventListener("click", function () {
+  aside.style.transform = "translateX(28rem)";
+});

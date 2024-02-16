@@ -1,9 +1,13 @@
 #projects {
   .projects {
+    padding: 3rem 0;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    // @media screen and (max-width: 1023px) {
+    // flex-direction: column;
+    // }
     .card {
       width: 48%;
       .img-div {
@@ -23,6 +27,14 @@
         justify-content: space-between;
         align-items: flex-start;
       }
+    }
+  }
+}
+#portfolio {
+  .portfolio {
+    width: 45vw;
+    h2 {
+      padding: 2rem 0;
     }
   }
 }

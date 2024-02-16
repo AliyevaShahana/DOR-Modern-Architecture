@@ -128,7 +128,7 @@ formLogin.addEventListener("submit", async function (e) {
   };
   let boolSeconf;
   if (loginInputs.value || passwordInputs.value) {
-    const res = await axios.post(`${BASE_URL}/sign/signin`, newObj);
+    const res = await axios.post(`${BASE_URL}/signin`, newObj);
 
     if (res.status === 200) {
       if (!res.data.isAdmin) {
@@ -141,36 +141,36 @@ formLogin.addEventListener("submit", async function (e) {
       loginInputs.value = "";
       passwordInputs.value = "";
 
-      Toastify({
-        text: "Login completed successfully.",
-        duration: 3000,
-        close: true,
-        gravity: "top",
-        position: "right",
-        backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
-      }).showToast();
+      // Toastify({
+      //   text: "Login completed successfully.",
+      //   duration: 3000,
+      //   close: true,
+      //   gravity: "top",
+      //   position: "right",
+      //   backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+      // }).showToast();
 
       // localStorage.setItem("login", true);
       return;
     } else {
-      Toastify({
-        text: "Wrong email or password!",
-        duration: 3000,
-        close: true,
-        gravity: "top",
-        position: "right",
-        backgroundColor: "linear-gradient(to right, red, #96c93d)",
-      }).showToast();
-      return;
+      // Toastify({
+      //   text: "Wrong email or password!",
+      //   duration: 3000,
+      //   close: true,
+      //   gravity: "top",
+      //   position: "right",
+      //   backgroundColor: "x1linear-gradient(to right, red, #96c93d)",
+      // }).showToast();
+      // return;
     }
   } else {
-    Toastify({
-      text: "fill in all fields",
-      duration: 3000,
-      close: true,
-      gravity: "top",
-      position: "right",
-      backgroundColor: "linear-gradient(to right, #FF5F6D, #FFC371)",
-    }).showToast();
+    // Toastify({
+    //   text: "fill in all fields",
+    //   duration: 3000,
+    //   close: true,
+    //   gravity: "top",
+    //   position: "right",
+    //   backgroundColor: "linear-gradient(to right, #FF5F6D, #FFC371)",
+    // }).showToast();
   }
 });

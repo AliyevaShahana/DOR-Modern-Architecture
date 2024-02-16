@@ -49,13 +49,15 @@
       <div class="container">
         <div class="header">
           <div class="left">
-            <span><a href="./index.html"> DØR</a></span>
+            <div class="head">
+              <a href="./index.html"> DØR</a>
+              <i class="fa-solid fa-bars" id="menu"></i>
+            </div>
             <nav>
               <ul>
                 <li><a href="./index.html">HOME</a></li>
                 <li><a href="./about.html">ABOUT</a></li>
-                <li><a href="./projects.html">Projects</a></li>
-                <li><a href="">Blog</a></li>
+                <li><a href="./projects.html">PROJECTS</a></li>
                 <li><a href="./shop.html">SHOP</a></li>
                 <li><a href="">CONTACT</a></li>
               </ul>
@@ -63,7 +65,7 @@
           </div>
           <div class="register">
             <i class="fa-solid fa-user"></i>
-            <h5>Login / Register</h5>
+            <h5>Register</h5>
           </div>
 
           <div class="icons">
@@ -74,11 +76,38 @@
         </div>
       </div>
     </header>
+    
+    <section id="menu-aside">
+      <div class="title">
+        <h4>DØR</h4>
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+      <div class="sign">
+        <nav>
+          <ul>
+            <li><a href="./index.html">HOME</a></li>
+            <li><a href="./about.html">ABOUT</a></li>
+            <li><a href="./projects.html">PROJECTS</a></li>
+            <li><a href="./shop.html">SHOP</a></li>
+            <li><a href="">CONTACT</a></li>
+          </ul>
+        </nav>
+        <div class="register">
+          <i class="fa-solid fa-user"></i>
+          <h5>Login / Register</h5>
+        </div>
+        <div class="icons">
+          <i class="fa-brands fa-facebook-f"></i>
+          <i class="fa-brands fa-pinterest-p"></i>
+          <i class="fa-solid fa-basketball"></i>
+        </div>
+      </div>
+    </section>
 
     <aside>
       <div class="title">
         <h4>DØR</h4>
-        <i class="fa-solid fa-xmark"></i>
+        <i class="fa-solid fa-xmark xmark"></i>
       </div>
       <div class="sign">
         <h4>Sign in</h4>
@@ -115,7 +144,7 @@
                 </div>
               </div>
               <div class="content">
-                <h1 class="h1">AAAAENVISION TOMORROW</h1>
+                <h1 class="h1">ENVISION TOMORROW</h1>
                 <p>
                   Import the entire theme demo content with just a single click
                   of your mouse & easily modify the elements to your liking.
@@ -138,7 +167,7 @@
               </div>
 
               <div class="content">
-                <h1>BBBENVISION TOMORROW</h1>
+                <h1>AMAZING BUILDINGS</h1>
                 <p>
                   Import the entire theme demo content with just a single click
                   of your mouse & easily modify the elements to your liking.
@@ -160,7 +189,7 @@
                 </div>
               </div>
               <div class="content">
-                <h1>CCCENVISION TOMORROW</h1>
+                <h1>ENVISION TOMORROW</h1>
                 <p>
                   Import the entire theme demo content with just a single click
                   of your mouse & easily modify the elements to your liking.
@@ -556,9 +585,9 @@
                 <h3>EMA DENISON</h3>
                 <h5>President & CEO</h5>
                 <div class="team-icon">
-                  <i class="fa-brands fa-facebook-f"></i>
-                  <i class="fa-brands fa-pinterest-p"></i>
-                  <i class="fa-solid fa-basketball"></i>
+                  <span><i class="fa-brands fa-facebook-f"></i></span>
+                  <span> <i class="fa-brands fa-pinterest-p"></i></span>
+                  <span><i class="fa-solid fa-basketball"></i> </span>
                 </div>
               </div>
             </div>
@@ -596,11 +625,17 @@
         <div class="advertising-video">
           <a>
             <div class="video-player">
+              <div class="icon-div">
+                <i class="fa-solid fa-xmark" onclick="stopVideo()"></i>
+              </div>
               <video width="100%" controls autoplay class="my-video">
                 <!-- <source src="./image/media.mp4" type="video/mp4" /> -->
               </video>
             </div>
-            <div class="icon play-video">
+            <div
+              class="icon play-video"
+              onclick="playVideo('./image/media.mp4')"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -654,7 +689,6 @@
                 </g>
               </svg>
             </div>
-            <i class="fa-solid x-mark"></i>
           </a>
         </div>
       </div>
@@ -770,5 +804,19 @@
         </div>
       </div>
     </section> -->
+
+    <footer>
+      <div class="container">
+        <div class="footer">
+          <h4>DØR</h4>
+          <h3>© 2019 Qode Interactive, All Rights Reserved</h3>
+          <div class="icons">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-pinterest-p"></i>
+            <i class="fa-solid fa-basketball"></i>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

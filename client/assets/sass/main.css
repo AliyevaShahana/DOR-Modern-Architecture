@@ -144,7 +144,6 @@ body {
   height: 500vh;
 }
 body header {
-  position: fixed;
   z-index: 111;
   background-color: black;
   width: 100%;
@@ -164,15 +163,38 @@ body header .header .left {
   gap: 3rem;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
 }
-body header .header .left span a {
+@media screen and (max-width: 1023px) {
+  body header .header .left .head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+body header .header .left .head a {
   font-weight: 300;
   font-size: 28px;
   line-height: 28px;
 }
+body header .header .left .head .fa-bars {
+  color: #fff;
+  display: none;
+}
+@media screen and (max-width: 1023px) {
+  body header .header .left .head .fa-bars {
+    display: block;
+  }
+}
 body header .header .left nav ul {
   display: flex;
   gap: 3rem;
+}
+@media screen and (max-width: 1023px) {
+  body header .header .left nav {
+    display: none;
+  }
 }
 body header .header .register {
   display: flex;
@@ -182,6 +204,11 @@ body header .header .register {
   border-radius: 30px;
   padding: 10px;
 }
+@media screen and (max-width: 1023px) {
+  body header .header .register {
+    display: none;
+  }
+}
 body header .header .register .fa-user {
   color: #fff;
 }
@@ -190,10 +217,58 @@ body header .header .icons {
   color: #fff;
   gap: 2rem;
 }
+@media screen and (max-width: 1023px) {
+  body header .header .icons {
+    display: none;
+  }
+}
 body header .header .icons i {
   font-size: 14px;
 }
-body aside {
+@media screen and (max-width: 1023px) {
+  body #menu-aside nav {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1023px) {
+  body #menu-aside nav ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+@media screen and (max-width: 1023px) {
+  body #menu-aside .register {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-self: center;
+    gap: 1rem;
+    border: 1px solid grey;
+    border-radius: 30px;
+    padding: 10px;
+  }
+}
+body #menu-aside .register .fa-user {
+  color: #fff;
+}
+@media screen and (max-width: 1023px) {
+  body #menu-aside .icons {
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    width: 100%;
+    gap: 2rem;
+  }
+}
+body #menu-aside .icons i {
+  font-size: 14px;
+}
+body aside,
+body #menu-aside {
   transform: translateX(28rem);
   background-color: #000;
   background-image: url("../image/sidearea-bg.jpg");
@@ -206,31 +281,37 @@ body aside {
   height: 100vh;
   transition: all 0.5s;
 }
-body aside .title {
+body aside .title,
+body #menu-aside .title {
   display: flex;
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid grey;
   padding: 1rem 2rem;
 }
-body aside .title h4 {
+body aside .title h4,
+body #menu-aside .title h4 {
   font-size: 25px;
 }
-body aside .title .fa-xmark {
+body aside .title .fa-xmark,
+body #menu-aside .title .fa-xmark {
   color: #fff;
   font-size: 20px;
 }
-body aside .sign {
+body aside .sign,
+body #menu-aside .sign {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   padding: 1rem;
   gap: 2rem;
 }
-body aside .sign .label-input span {
+body aside .sign .label-input span,
+body #menu-aside .sign .label-input span {
   color: rgba(255, 0, 0, 0.547);
 }
-body aside .sign .label-input input {
+body aside .sign .label-input input,
+body #menu-aside .sign .label-input input {
   margin-top: 7px;
   padding: 12px;
   border: 1px solid #1d1d1d;
@@ -238,27 +319,31 @@ body aside .sign .label-input input {
   background-color: #1d1d1d;
   width: 20rem;
 }
-body aside .sign .label-input input:focus {
+body aside .sign .label-input input:focus,
+body #menu-aside .sign .label-input input:focus {
   background-color: #fff;
 }
-body aside .sign .login-btn {
+body aside .sign .login-btn,
+body #menu-aside .sign .login-btn {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
 }
-body aside .sign .login-btn button {
+body aside .sign .login-btn button,
+body #menu-aside .sign .login-btn button {
   padding: 12px;
   border: 1px solid black;
   border-radius: 30px;
   background-color: rgba(255, 0, 0, 0.547);
   width: 20rem;
 }
-body aside .sign .login-btn a {
+body aside .sign .login-btn a,
+body #menu-aside .sign .login-btn a {
   letter-spacing: normal;
 }
 body main .container .main {
-  padding: 2.5rem;
+  padding: 0 0 2.5rem 0;
 }
 body main .container .main .owl-carousel {
   height: 578px;
@@ -709,8 +794,19 @@ body #about-us-company .about-us-company {
   }
 }
 body #about-us-company .about-us-company .content-wrap {
-  width: 45%;
+  width: 50%;
+  position: relative;
+}
+body #about-us-company .about-us-company .content-wrap:before {
+  content: "";
   position: absolute;
+  width: 100%;
+  top: 0;
+  right: 0;
+  height: 100%;
+  background-color: #000;
+  animation-delay: 0.4s;
+  z-index: 3;
 }
 @media screen and (max-width: 1023px) {
   body #about-us-company .about-us-company .content-wrap {
@@ -718,7 +814,6 @@ body #about-us-company .about-us-company .content-wrap {
   }
 }
 body #about-us-company .about-us-company .content-wrap .content {
-  position: absolute;
   top: 3rem;
   width: 100%;
   z-index: 1111;
@@ -729,6 +824,11 @@ body #about-us-company .about-us-company .content-wrap .content {
   align-items: flex-start;
   gap: 1rem;
   z-index: 99;
+}
+@keyframes ABOUT {
+  100% {
+    width: 0;
+  }
 }
 @media screen and (max-width: 1023px) {
   body #about-us-company .about-us-company .content-wrap .content {
@@ -783,10 +883,10 @@ body #about-us-company .about-us-company .content-wrap .content a .text {
   vertical-align: middle;
 }
 body #about-us-company .about-us-company .photo {
+  position: relative;
   width: calc(50% + 10px);
   z-index: -11;
-  height: 100%;
-  aspect-ratio: auto 800/533;
+  padding: 10rem;
   background-image: url("../image/main-img-1.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -799,10 +899,23 @@ body #about-us-company .about-us-company .photo {
     top: -29.8rem;
   }
 }
+body #about-us-company .about-us-company .photo:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: 0;
+  right: 0;
+  height: 100%;
+  background-color: black;
+  animation-delay: 0.4s;
+}
 @keyframes about {
   100% {
-    width: 0;
+    width: 0%;
   }
+}
+body #our-team .our-team {
+  padding: 0 0 5rem 0;
 }
 body #our-team .our-team .title {
   display: flex;
@@ -863,38 +976,28 @@ body #our-team .our-team .cards .card .content {
   overflow: hidden;
   transition: 0.5s;
 }
+body #our-team .our-team .cards .card .content h5 {
+  transition: all 0.5s;
+}
 body #our-team .our-team .cards .card .content:hover .team-icon {
-  bottom: 25px;
+  transform: translateY(-12px);
 }
 body #our-team .our-team .cards .card .content:hover h5 {
-  display: none;
+  opacity: 0;
 }
 body #our-team .our-team .cards .card .content .team-icon {
   display: flex;
   gap: 1rem;
   justify-content: center;
   color: white;
-  background-color: red;
   transform: translateY(43px);
   transition: 0.5s;
   position: absolute;
+  bottom: -65px;
   left: 45px;
   left: 0;
   width: 100%;
   height: 100%;
-}
-body #our-team .our-team .cards .card:nth-child(1) {
-  margin: 1.6rem;
-}
-@media screen and (max-width: 1023px) {
-  body #our-team .our-team .cards .card:nth-child(1) {
-    padding: 0;
-    width: 76%;
-    margin-left: 1.3rem;
-  }
-}
-body #our-team .our-team .cards .card:nth-child(3) {
-  margin-right: 1.6rem;
 }
 body #advertising-video {
   background-image: url("../image/main-video-parallax.jpg");
@@ -910,8 +1013,8 @@ body #advertising-video .advertising-video {
   justify-content: center;
 }
 body #advertising-video .advertising-video .video-player {
-  width: 55%;
-  position: fixed;
+  width: 100%;
+  position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -920,15 +1023,21 @@ body #advertising-video .advertising-video .video-player {
 body #advertising-video .advertising-video .video-player:focus {
   outline: none;
 }
-body #advertising-video .advertising-video .x-mark {
+body #advertising-video .advertising-video .icon-div {
+  display: flex;
+  justify-content: end;
+}
+body #advertising-video .advertising-video .icon-div .x-mark {
   color: white;
   position: absolute;
   z-index: 11;
-  left: 50%;
+  left: 0;
   top: 50%;
   transform: translate(-50%, -50%);
-  height: 10px;
-  width: 10px;
+  height: 20px;
+  width: 20px;
+  font-size: 20px;
+  cursor: pointer;
 }
 body #check-out {
   padding: 5rem 0 15rem 0;
@@ -1089,6 +1198,30 @@ body #core-company .core-company .right {
     transform: translateX(0px);
   }
 }
+footer {
+  background: #000;
+}
+footer .footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+}
+@media screen and (max-width: 1023px) {
+  footer .footer {
+    flex-direction: column;
+    align-items: start;
+    gap: 2rem;
+  }
+}
+footer .footer .icons {
+  display: flex;
+  gap: 2rem;
+}
+footer .footer .icons i {
+  color: #fff;
+}
+
 #header-slider {
   position: relative;
   color: #fff;
@@ -1134,10 +1267,12 @@ body #core-company .core-company .right {
   position: absolute;
   bottom: -160px;
   width: 100%;
+  z-index: -111;
 }
 @media screen and (max-width: 1023px) {
   #header-slider .boxs-wrap {
     bottom: -102rem;
+    opacity: 0.7;
   }
 }
 @media screen and (max-width: 767px) {
@@ -1262,6 +1397,11 @@ body #core-company .core-company .right {
   align-items: center;
   justify-content: center;
   gap: 5rem;
+}
+@media screen and (max-width: 1023px) {
+  #counter .container {
+    grid-template-columns: auto;
+  }
 }
 #counter .container .counter {
   color: #fff;
@@ -1452,6 +1592,7 @@ body #core-company .core-company .right {
 }
 @media screen and (max-width: 1023px) {
   #lorem-ipsum .lorem-ipsum .text {
+    width: 80%;
     margin: 0;
   }
 }
@@ -2783,6 +2924,7 @@ body {
 }
 
 #projects .projects {
+  padding: 3rem 0;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -2809,6 +2951,13 @@ body {
   align-items: flex-start;
 }
 
+#portfolio .portfolio {
+  width: 45vw;
+}
+#portfolio .portfolio h2 {
+  padding: 2rem 0;
+}
+
 #project .project {
   padding: 2rem 0;
 }
@@ -2816,6 +2965,12 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: start;
+  gap: 1rem;
+}
+@media screen and (max-width: 1023px) {
+  #project .project .title {
+    flex-direction: column;
+  }
 }
 #project .project .title .img-div {
   width: 40vw;
@@ -2826,6 +2981,14 @@ body {
 #project .project .title .table-info {
   border-bottom: 1px solid gray;
   padding: 0 0 2rem 0;
+}
+#project .project .title .table-info table {
+  table-layout: fixed;
+}
+@media screen and (max-width: 1023px) {
+  #project .project .title .table-info table {
+    width: 100%;
+  }
 }
 #project .project .title .table-info table td {
   padding: 1rem 2rem 0 0;
@@ -2839,6 +3002,11 @@ body {
 #project .project .title .description {
   width: 20vw;
   padding: 3rem 0;
+}
+@media screen and (max-width: 1023px) {
+  #project .project .title .description {
+    width: 100%;
+  }
 }
 #project .project .top-img {
   padding: 2rem 0;
