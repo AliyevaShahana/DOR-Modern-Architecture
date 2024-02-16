@@ -57,7 +57,7 @@
       defer
       src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"
     ></script>
-    <script defer src="./js/admin.js"></script>
+    <script defer src="./js/adminProject.js"></script>
   </head>
   <body style="background: rgba(240, 240, 240, 0.486)">
     <div id="body">
@@ -81,7 +81,7 @@
             </svg>
             <a href=""> <h6>Home</h6></a>
           </li>
-          <li style="background-color: #fff">
+          <li>
             <svg
               viewBox="0 0 20 20"
               class="Polaris-Icon__Svg"
@@ -111,7 +111,7 @@
             </svg>
             <a href=""> <h6>Customers</h6></a>
           </li>
-          <li>
+          <li style="background-color: #fff">
             <svg
               viewBox="0 0 20 20"
               class="Polaris-Icon__Svg"
@@ -130,14 +130,15 @@
                 d="M12.75 15a.75.75 0 0 0 0 1.5h2.5a.75.75 0 0 0 0-1.5h-2.5Z"
               ></path>
             </svg>
-            <a href="./adminProject.html"> <h6>Projects</h6></a>
+            <a href=""> <h6>Projects</h6></a>
           </li>
         </ul>
       </section>
-      <section id="admin">
+
+      <section id="admin-projects">
         <div class="container">
           <div class="admin">
-            <h3>Add Product</h3>
+            <h3>Add Project</h3>
             <form>
               <div class="part form-title">
                 <div class="inp-div">
@@ -146,7 +147,7 @@
                 </div>
 
                 <div class="inp-div">
-                  <label for="price"><h6>Price</h6></label>
+                  <label for="price"><h6>Year</h6></label>
                   <input type="number" id="price" />
                 </div>
 
@@ -154,10 +155,21 @@
                   <label for="category"><h6>Category</h6></label>
                   <input type="text" id="category" />
                 </div>
-
                 <div class="inp-div">
-                  <label for="description"><h6>Description Photo</h6></label>
-                  <input type="file" id="description" />
+                  <label for="type"><h6>Type</h6></label>
+                  <input type="text" id="type" />
+                </div>
+                <div class="inp-div">
+                  <label for="location"><h6>Location</h6></label>
+                  <input type="text" id="location" />
+                </div>
+                <div class="inp-div">
+                  <label for="area"><h6>Area</h6></label>
+                  <input type="text" id="area" />
+                </div>
+                <div class="inp-div">
+                  <label for="description"><h6>Description</h6></label>
+                  <input type="text" id="description" />
                 </div>
               </div>
 
@@ -169,16 +181,6 @@
                 </div>
 
                 <div class="inp-div">
-                  <label for="video"><h6>Video</h6></label>
-                  <input type="file" id="video" />
-                </div>
-
-                <div class="inp-div">
-                  <label for="video-photo"><h6>Video Photo</h6></label>
-                  <input type="file" id="video-photo" />
-                </div>
-
-                <div class="inp-div">
                   <label for="image-one"><h6>First Photo</h6></label>
                   <input type="file" id="image-one" />
                 </div>
@@ -187,33 +189,38 @@
                   <label for="image-two"><h6>Second Photo</h6></label>
                   <input type="file" id="image-two" />
                 </div>
-              </div>
-
-              <div class="part form-details">
-                <h6>Details</h6>
                 <div class="inp-div">
-                  <label for="brand"><h6>Brand</h6></label>
-                  <input type="text" id="brand" />
+                  <label for="image-two"><h6>Third Photo</h6></label>
+                  <input type="file" id="image-two" />
                 </div>
-
                 <div class="inp-div">
-                  <label for="collection"><h6>Collection</h6></label>
-                  <input type="text" id="collection" />
-                </div>
-
-                <div class="inp-div">
-                  <label for="color"><h6>Color</h6></label>
-                  <input type="text" id="color" />
-                </div>
-
-                <div class="inp-div">
-                  <label for="materials"><h6>Materials</h6></label>
-                  <input type="text" id="materials" />
+                  <label for="image-two"><h6>Fourth Photo</h6></label>
+                  <input type="file" id="image-two" />
                 </div>
               </div>
+
+              <!-- <div class="part form-details">
+                <div class="inp-div">
+                  <label for="image-two"><h6>Fifth Photo</h6></label>
+                  <input type="file" id="image-two" />
+                </div>
+                <div class="inp-div">
+                  <label for="image-two"><h6>Sixth Photo</h6></label>
+                  <input type="file" id="image-two" />
+                </div>
+                <div class="inp-div">
+                  <label for="image-two"><h6>Seventh Photo</h6></label>
+                  <input type="file" id="image-two" />
+                </div>
+                <div class="inp-div">
+                  <label for="image-two"><h6>Eighth Photo</h6></label>
+                  <input type="file" id="image-two" />
+                </div>
+              </div> -->
 
               <button type="submit"><h4>ADD</h4></button>
             </form>
+
             <h3>List Of Products</h3>
 
             <div id="loading-overlay" class="open">
@@ -221,13 +228,16 @@
               Loading...
             </div>
 
-            <table>
+            <table class="admin-projects">
               <thead>
                 <tr>
                   <th><h6>Pictures</h6></th>
                   <th><h6>Title</h6></th>
-                  <th><h6>Price</h6></th>
+                  <th><h6>Year</h6></th>
                   <th><h6>Category</h6></th>
+                  <th><h6>Type</h6></th>
+                  <th><h6>Location</h6></th>
+                  <th><h6>Area</h6></th>
                   <th><h6>CRUD</h6></th>
                   <th><h6></h6></th>
                 </tr>

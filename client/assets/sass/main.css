@@ -2728,12 +2728,13 @@ body {
 #admin .admin table,
 #admin .admin tr,
 #admin .admin td {
+  vertical-align: middle;
   border: 1px solid grey;
   border-collapse: collapse;
   padding: 0 3rem;
 }
 #admin .admin .td-img {
-  padding-top: 10px;
+  padding: 10px;
 }
 #admin .admin td {
   height: 100%;
@@ -3014,4 +3015,172 @@ body {
 }
 #project .project .top-img img {
   width: 30%;
+}
+
+#body {
+  display: flex;
+}
+#body h6 {
+  color: #000;
+  font-weight: 500;
+}
+#body h4 {
+  color: #000;
+  font-size: 25px;
+}
+
+#admin-aside {
+  background: rgb(235, 235, 235);
+  width: 20vw;
+  padding: 2rem 1rem;
+  height: 100vh;
+  position: fixed;
+}
+#admin-aside .head {
+  align-items: center;
+  gap: 1rem;
+}
+#admin-aside .head img {
+  width: 20%;
+}
+#admin-aside ul {
+  margin-top: 5rem;
+}
+#admin-aside ul li {
+  display: flex;
+  gap: 1rem;
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin-top: 2rem;
+}
+#admin-aside ul li:hover {
+  background-color: #fff;
+}
+#admin-aside ul li svg {
+  height: 25px;
+  width: 25px;
+}
+
+#admin-projects {
+  position: absolute;
+  right: 0;
+  background: rgb(241, 241, 241);
+  width: 80vw;
+}
+#admin-projects .admin h3 {
+  color: #000;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+#admin-projects .admin form {
+  display: flex;
+  align-items: start;
+  gap: 2rem;
+}
+#admin-projects .admin form .part {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 20vw;
+  border-radius: 10px;
+  border: 1px solid rgba(181, 181, 181, 0.587);
+  background: #fff;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+#admin-projects .admin form .part input {
+  border: 1px solid rgba(128, 128, 128, 0.607);
+  background: rgb(241, 241, 241);
+  border-radius: 8px;
+  padding: 5px;
+  width: 100%;
+}
+#admin-projects .admin .loading {
+  display: none;
+}
+#admin-projects .admin .loading.show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+}
+#admin-projects .admin #loading-overlay.open {
+  display: flex;
+}
+#admin-projects .admin #loading-overlay {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 10px;
+  left: 0;
+  z-index: 10;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 40px;
+  color: black;
+  font-size: 32px;
+  font-weight: 600;
+  justify-content: center;
+}
+#admin-projects .admin .lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+#admin-projects .admin .lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid black;
+  border-color: black transparent black transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+#admin-projects .admin table {
+  margin-bottom: 5rem;
+}
+#admin-projects .admin table img {
+  width: 3rem;
+}
+#admin-projects .admin table,
+#admin-projects .admin tr,
+#admin-projects .admin td {
+  vertical-align: middle;
+  border: 1px solid grey;
+  border-collapse: collapse;
+  padding: 0 10px;
+}
+#admin-projects .admin .td-img {
+  padding: 10px;
+}
+#admin-projects .admin td {
+  height: 100%;
+}
+#admin-projects .admin td h6 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+#admin-projects .admin td .fa-trash-can {
+  margin-right: 10px;
+  color: rgb(144, 7, 7);
+}
+#admin-projects .admin td .fa-pen-to-square {
+  color: rgb(7, 91, 7);
+}
+#admin-projects .admin th {
+  text-align: center;
 }/*# sourceMappingURL=main.css.map */
